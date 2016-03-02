@@ -1,0 +1,2468 @@
+{
+    "concelhos": [
+        {
+            "Posicao": "1",
+            "Concelho": " Lisboa",
+            "População residente": "547733",
+            "% do Total": "5,186",
+            "Habitantes/km2": "6389,6",
+            "Hab/km": "2"
+        },
+        {
+            "Posicao": "2",
+            "Concelho": " Sintra",
+            "População residente": "377835",
+            "% do Total": "3,577",
+            "Habitantes/km2": "1186,4",
+            "Hab/km": "21"
+        },
+        {
+            "Posicao": "3",
+            "Concelho": " Vila Nova de Gaia",
+            "População residente": "302295",
+            "% do Total": "2,862",
+            "Habitantes/km2": "1798,5",
+            "Hab/km": "11"
+        },
+        {
+            "Posicao": "4",
+            "Concelho": " Porto",
+            "População residente": "237591",
+            "% do Total": "2,249",
+            "Habitantes/km2": "5686,9",
+            "Hab/km": "3"
+        },
+        {
+            "Posicao": "5",
+            "Concelho": " Cascais",
+            "População residente": "206479",
+            "% do Total": "1,955",
+            "Habitantes/km2": "2127,1",
+            "Hab/km": "10"
+        },
+        {
+            "Posicao": "6",
+            "Concelho": " Loures",
+            "População residente": "205054",
+            "% do Total": "1,941",
+            "Habitantes/km2": "1216,9",
+            "Hab/km": "19"
+        },
+        {
+            "Posicao": "7",
+            "Concelho": " Braga",
+            "População residente": "181494",
+            "% do Total": "1,718",
+            "Habitantes/km2": "991,4",
+            "Hab/km": "22"
+        },
+        {
+            "Posicao": "8",
+            "Concelho": " Matosinhos",
+            "População residente": "175478",
+            "% do Total": "1,661",
+            "Habitantes/km2": "2815,4",
+            "Hab/km": "6"
+        },
+        {
+            "Posicao": "9",
+            "Concelho": " Amadora",
+            "População residente": "175136",
+            "% do Total": "1,658",
+            "Habitantes/km2": "7376,1",
+            "Hab/km": "1"
+        },
+        {
+            "Posicao": "10",
+            "Concelho": " Almada",
+            "População residente": "174030",
+            "% do Total": "1,648",
+            "Habitantes/km2": "2477",
+            "Hab/km": "8"
+        },
+        {
+            "Posicao": "11",
+            "Concelho": " Oeiras",
+            "População residente": "172120",
+            "% do Total": "1,63",
+            "Habitantes/km2": "3759,1",
+            "Hab/km": "5"
+        },
+        {
+            "Posicao": "12",
+            "Concelho": " Gondomar",
+            "População residente": "168027",
+            "% do Total": "1,591",
+            "Habitantes/km2": "1276,1",
+            "Hab/km": "17"
+        },
+        {
+            "Posicao": "13",
+            "Concelho": " Seixal",
+            "População residente": "158269",
+            "% do Total": "1,498",
+            "Habitantes/km2": "1667,7",
+            "Hab/km": "12"
+        },
+        {
+            "Posicao": "14",
+            "Concelho": " Guimarães",
+            "População residente": "158124",
+            "% do Total": "1,497",
+            "Habitantes/km2": "656",
+            "Hab/km": "28"
+        },
+        {
+            "Posicao": "15",
+            "Concelho": " Odivelas",
+            "População residente": "144549",
+            "% do Total": "1,369",
+            "Habitantes/km2": "5528,2",
+            "Hab/km": "4"
+        },
+        {
+            "Posicao": "16",
+            "Concelho": " Coimbra",
+            "População residente": "143396",
+            "% do Total": "1,358",
+            "Habitantes/km2": "446,1",
+            "Hab/km": "39"
+        },
+        {
+            "Posicao": "17",
+            "Concelho": " Santa Maria da Feira",
+            "População residente": "139312",
+            "% do Total": "1,319",
+            "Habitantes/km2": "647,2",
+            "Hab/km": "29"
+        },
+        {
+            "Posicao": "18",
+            "Concelho": " Vila Franca de Xira",
+            "População residente": "136886",
+            "% do Total": "1,296",
+            "Habitantes/km2": "432,3",
+            "Hab/km": "40"
+        },
+        {
+            "Posicao": "19",
+            "Concelho": " Maia",
+            "População residente": "135306",
+            "% do Total": "1,281",
+            "Habitantes/km2": "1634,3",
+            "Hab/km": "13"
+        },
+        {
+            "Posicao": "20",
+            "Concelho": " Vila Nova de Famalicão",
+            "População residente": "133832",
+            "% do Total": "1,267",
+            "Habitantes/km2": "665",
+            "Hab/km": "27"
+        },
+        {
+            "Posicao": "21",
+            "Concelho": " Leiria",
+            "População residente": "126897",
+            "% do Total": "1,201",
+            "Habitantes/km2": "224,5",
+            "Hab/km": "65"
+        },
+        {
+            "Posicao": "22",
+            "Concelho": " Setúbal",
+            "População residente": "121185",
+            "% do Total": "1,147",
+            "Habitantes/km2": "525,7",
+            "Hab/km": "34"
+        },
+        {
+            "Posicao": "23",
+            "Concelho": " Barcelos",
+            "População residente": "120391",
+            "% do Total": "1,14",
+            "Habitantes/km2": "318",
+            "Hab/km": "48"
+        },
+        {
+            "Posicao": "24",
+            "Concelho": " Funchal",
+            "População residente": "111892",
+            "% do Total": "1,059",
+            "Habitantes/km2": "1457,7",
+            "Hab/km": "16"
+        },
+        {
+            "Posicao": "25",
+            "Concelho": " Viseu",
+            "População residente": "99274",
+            "% do Total": "0,94",
+            "Habitantes/km2": "195,6",
+            "Hab/km": "70"
+        },
+        {
+            "Posicao": "26",
+            "Concelho": " Valongo",
+            "População residente": "93858",
+            "% do Total": "0,889",
+            "Habitantes/km2": "1254,4",
+            "Hab/km": "18"
+        },
+        {
+            "Posicao": "27",
+            "Concelho": " Viana do Castelo",
+            "População residente": "88725",
+            "% do Total": "0,84",
+            "Habitantes/km2": "278",
+            "Hab/km": "56"
+        },
+        {
+            "Posicao": "28",
+            "Concelho": " Paredes",
+            "População residente": "86854",
+            "% do Total": "0,822",
+            "Habitantes/km2": "555",
+            "Hab/km": "30"
+        },
+        {
+            "Posicao": "29",
+            "Concelho": " Vila do Conde",
+            "População residente": "79533",
+            "% do Total": "0,753",
+            "Habitantes/km2": "535",
+            "Hab/km": "32"
+        },
+        {
+            "Posicao": "30",
+            "Concelho": " Torres Vedras",
+            "População residente": "79465",
+            "% do Total": "0,752",
+            "Habitantes/km2": "195,3",
+            "Hab/km": "71"
+        },
+        {
+            "Posicao": "31",
+            "Concelho": " Barreiro",
+            "População residente": "78764",
+            "% do Total": "0,746",
+            "Habitantes/km2": "2163,8",
+            "Hab/km": "9"
+        },
+        {
+            "Posicao": "32",
+            "Concelho": " Aveiro",
+            "População residente": "78450",
+            "% do Total": "0,743",
+            "Habitantes/km2": "396,2",
+            "Hab/km": "42"
+        },
+        {
+            "Posicao": "33",
+            "Concelho": " Mafra",
+            "População residente": "76685",
+            "% do Total": "0,726",
+            "Habitantes/km2": "265,6",
+            "Hab/km": "57"
+        },
+        {
+            "Posicao": "34",
+            "Concelho": " Penafiel",
+            "População residente": "72265",
+            "% do Total": "0,684",
+            "Habitantes/km2": "340,5",
+            "Hab/km": "47"
+        },
+        {
+            "Posicao": "35",
+            "Concelho": " Santo Tirso",
+            "População residente": "71530",
+            "% do Total": "0,677",
+            "Habitantes/km2": "523,7",
+            "Hab/km": "36"
+        },
+        {
+            "Posicao": "36",
+            "Concelho": " Loulé",
+            "População residente": "70622",
+            "% do Total": "0,669",
+            "Habitantes/km2": "92",
+            "Hab/km": "131"
+        },
+        {
+            "Posicao": "37",
+            "Concelho": " Ponta Delgada",
+            "População residente": "68809",
+            "% do Total": "0,651",
+            "Habitantes/km2": "295,4",
+            "Hab/km": "54"
+        },
+        {
+            "Posicao": "38",
+            "Concelho": " Oliveira de Azeméis",
+            "População residente": "68611",
+            "% do Total": "0,65",
+            "Habitantes/km2": "426",
+            "Hab/km": "41"
+        },
+        {
+            "Posicao": "39",
+            "Concelho": " Moita",
+            "População residente": "66029",
+            "% do Total": "0,625",
+            "Habitantes/km2": "1196",
+            "Hab/km": "20"
+        },
+        {
+            "Posicao": "40",
+            "Concelho": " Faro",
+            "População residente": "64560",
+            "% do Total": "0,611",
+            "Habitantes/km2": "316,5",
+            "Hab/km": "51"
+        },
+        {
+            "Posicao": "41",
+            "Concelho": " Póvoa de Varzim",
+            "População residente": "63408",
+            "% do Total": "0,6",
+            "Habitantes/km2": "772,4",
+            "Hab/km": "25"
+        },
+        {
+            "Posicao": "42",
+            "Concelho": " Palmela",
+            "População residente": "62831",
+            "% do Total": "0,595",
+            "Habitantes/km2": "135,8",
+            "Hab/km": "105"
+        },
+        {
+            "Posicao": "43",
+            "Concelho": " Santarém",
+            "População residente": "62200",
+            "% do Total": "0,589",
+            "Habitantes/km2": "110,8",
+            "Hab/km": "118"
+        },
+        {
+            "Posicao": "44",
+            "Concelho": " Figueira da Foz",
+            "População residente": "62125",
+            "% do Total": "0,588",
+            "Habitantes/km2": "163,8",
+            "Hab/km": "83"
+        },
+        {
+            "Posicao": "45",
+            "Concelho": " Felgueiras",
+            "População residente": "58065",
+            "% do Total": "0,55",
+            "Habitantes/km2": "502,2",
+            "Hab/km": "37"
+        },
+        {
+            "Posicao": "46",
+            "Concelho": " Alcobaça",
+            "População residente": "56693",
+            "% do Total": "0,537",
+            "Habitantes/km2": "138,8",
+            "Hab/km": "99"
+        },
+        {
+            "Posicao": "47",
+            "Concelho": " Évora",
+            "População residente": "56596",
+            "% do Total": "0,536",
+            "Habitantes/km2": "43,2",
+            "Hab/km": "195"
+        },
+        {
+            "Posicao": "48",
+            "Concelho": " Paços de Ferreira",
+            "População residente": "56340",
+            "% do Total": "0,533",
+            "Habitantes/km2": "796,7",
+            "Hab/km": "24"
+        },
+        {
+            "Posicao": "49",
+            "Concelho": " Amarante",
+            "População residente": "56264",
+            "% do Total": "0,533",
+            "Habitantes/km2": "186,5",
+            "Hab/km": "74"
+        },
+        {
+            "Posicao": "50",
+            "Concelho": " Castelo Branco",
+            "População residente": "56109",
+            "% do Total": "0,531",
+            "Habitantes/km2": "38,9",
+            "Hab/km": "204"
+        },
+        {
+            "Posicao": "51",
+            "Concelho": " Portimão",
+            "População residente": "55614",
+            "% do Total": "0,527",
+            "Habitantes/km2": "304,6",
+            "Hab/km": "53"
+        },
+        {
+            "Posicao": "52",
+            "Concelho": " Ovar",
+            "População residente": "55398",
+            "% do Total": "0,524",
+            "Habitantes/km2": "374,7",
+            "Hab/km": "43"
+        },
+        {
+            "Posicao": "53",
+            "Concelho": " Pombal",
+            "População residente": "55217",
+            "% do Total": "0,523",
+            "Habitantes/km2": "88,1",
+            "Hab/km": "137"
+        },
+        {
+            "Posicao": "54",
+            "Concelho": " Marco de Canaveses",
+            "População residente": "53450",
+            "% do Total": "0,506",
+            "Habitantes/km2": "265,1",
+            "Hab/km": "58"
+        },
+        {
+            "Posicao": "55",
+            "Concelho": " Vila Real",
+            "População residente": "51850",
+            "% do Total": "0,491",
+            "Habitantes/km2": "136,9",
+            "Hab/km": "102"
+        },
+        {
+            "Posicao": "56",
+            "Concelho": " Covilhã",
+            "População residente": "51797",
+            "% do Total": "0,49",
+            "Habitantes/km2": "92,8",
+            "Hab/km": "130"
+        },
+        {
+            "Posicao": "57",
+            "Concelho": " Caldas da Rainha",
+            "População residente": "51729",
+            "% do Total": "0,49",
+            "Habitantes/km2": "202,6",
+            "Hab/km": "69"
+        },
+        {
+            "Posicao": "58",
+            "Concelho": " Montijo",
+            "População residente": "51222",
+            "% do Total": "0,485",
+            "Habitantes/km2": "148,5",
+            "Hab/km": "89"
+        },
+        {
+            "Posicao": "59",
+            "Concelho": " Fafe",
+            "População residente": "50633",
+            "% do Total": "0,479",
+            "Habitantes/km2": "231,1",
+            "Hab/km": "63"
+        },
+        {
+            "Posicao": "60",
+            "Concelho": " Sesimbra",
+            "População residente": "49500",
+            "% do Total": "0,469",
+            "Habitantes/km2": "254,4",
+            "Hab/km": "61"
+        },
+        {
+            "Posicao": "61",
+            "Concelho": " Vila Verde",
+            "População residente": "47888",
+            "% do Total": "0,453",
+            "Habitantes/km2": "209,8",
+            "Hab/km": "66"
+        },
+        {
+            "Posicao": "62",
+            "Concelho": " Águeda",
+            "População residente": "47729",
+            "% do Total": "0,452",
+            "Habitantes/km2": "142,2",
+            "Hab/km": "98"
+        },
+        {
+            "Posicao": "63",
+            "Concelho": " Lousada",
+            "População residente": "47387",
+            "% do Total": "0,449",
+            "Habitantes/km2": "494,2",
+            "Hab/km": "38"
+        },
+        {
+            "Posicao": "64",
+            "Concelho": " Ourém",
+            "População residente": "45932",
+            "% do Total": "0,435",
+            "Habitantes/km2": "110,3",
+            "Hab/km": "119"
+        },
+        {
+            "Posicao": "65",
+            "Concelho": " Olhão",
+            "População residente": "45396",
+            "% do Total": "0,43",
+            "Habitantes/km2": "346",
+            "Hab/km": "46"
+        },
+        {
+            "Posicao": "66",
+            "Concelho": " Ponte de Lima",
+            "População residente": "43498",
+            "% do Total": "0,412",
+            "Habitantes/km2": "135,9",
+            "Hab/km": "103"
+        },
+        {
+            "Posicao": "67",
+            "Concelho": " Alenquer",
+            "População residente": "43267",
+            "% do Total": "0,41",
+            "Habitantes/km2": "142,3",
+            "Hab/km": "97"
+        },
+        {
+            "Posicao": "68",
+            "Concelho": " Santa Cruz",
+            "População residente": "43005",
+            "% do Total": "0,407",
+            "Habitantes/km2": "528,2",
+            "Hab/km": "33"
+        },
+        {
+            "Posicao": "69",
+            "Concelho": " Guarda",
+            "População residente": "42541",
+            "% do Total": "0,403",
+            "Habitantes/km2": "59,5",
+            "Hab/km": "167"
+        },
+        {
+            "Posicao": "70",
+            "Concelho": " Chaves",
+            "População residente": "41243",
+            "% do Total": "0,39",
+            "Habitantes/km2": "69,8",
+            "Hab/km": "159"
+        },
+        {
+            "Posicao": "71",
+            "Concelho": " Albufeira",
+            "População residente": "40828",
+            "% do Total": "0,387",
+            "Habitantes/km2": "288,4",
+            "Hab/km": "55"
+        },
+        {
+            "Posicao": "72",
+            "Concelho": " Tomar",
+            "População residente": "40677",
+            "% do Total": "0,385",
+            "Habitantes/km2": "115,3",
+            "Hab/km": "114"
+        },
+        {
+            "Posicao": "73",
+            "Concelho": " Abrantes",
+            "População residente": "39325",
+            "% do Total": "0,372",
+            "Habitantes/km2": "54,8",
+            "Hab/km": "176"
+        },
+        {
+            "Posicao": "74",
+            "Concelho": " Trofa",
+            "População residente": "38999",
+            "% do Total": "0,369",
+            "Habitantes/km2": "541,8",
+            "Hab/km": "31"
+        },
+        {
+            "Posicao": "75",
+            "Concelho": " Marinha Grande",
+            "População residente": "38681",
+            "% do Total": "0,366",
+            "Habitantes/km2": "206,9",
+            "Hab/km": "67"
+        },
+        {
+            "Posicao": "76",
+            "Concelho": " Ílhavo",
+            "População residente": "38598",
+            "% do Total": "0,365",
+            "Habitantes/km2": "524,7",
+            "Hab/km": "35"
+        },
+        {
+            "Posicao": "77",
+            "Concelho": " Silves",
+            "População residente": "37126",
+            "% do Total": "0,351",
+            "Habitantes/km2": "54,4",
+            "Hab/km": "177"
+        },
+        {
+            "Posicao": "78",
+            "Concelho": " Torres Novas",
+            "População residente": "36717",
+            "% do Total": "0,348",
+            "Habitantes/km2": "135,9",
+            "Hab/km": "104"
+        },
+        {
+            "Posicao": "79",
+            "Concelho": " Cantanhede",
+            "População residente": "36595",
+            "% do Total": "0,346",
+            "Habitantes/km2": "93,7",
+            "Hab/km": "128"
+        },
+        {
+            "Posicao": "80",
+            "Concelho": " Beja",
+            "População residente": "35854",
+            "% do Total": "0,339",
+            "Habitantes/km2": "31,2",
+            "Hab/km": "217"
+        },
+        {
+            "Posicao": "81",
+            "Concelho": " Câmara de Lobos",
+            "População residente": "35666",
+            "% do Total": "0,338",
+            "Habitantes/km2": "679,3",
+            "Hab/km": "26"
+        },
+        {
+            "Posicao": "82",
+            "Concelho": " Angra do Heroísmo",
+            "População residente": "35402",
+            "% do Total": "0,335",
+            "Habitantes/km2": "147,9",
+            "Hab/km": "91"
+        },
+        {
+            "Posicao": "83",
+            "Concelho": " Bragança",
+            "População residente": "35341",
+            "% do Total": "0,335",
+            "Habitantes/km2": "30,1",
+            "Hab/km": "222"
+        },
+        {
+            "Posicao": "84",
+            "Concelho": " Esposende",
+            "População residente": "34254",
+            "% do Total": "0,324",
+            "Habitantes/km2": "359,8",
+            "Hab/km": "44"
+        },
+        {
+            "Posicao": "85",
+            "Concelho": " Ribeira Grande",
+            "População residente": "32112",
+            "% do Total": "0,304",
+            "Habitantes/km2": "178,6",
+            "Hab/km": "78"
+        },
+        {
+            "Posicao": "86",
+            "Concelho": " Espinho",
+            "População residente": "31786",
+            "% do Total": "0,301",
+            "Habitantes/km2": "1502",
+            "Hab/km": "14"
+        },
+        {
+            "Posicao": "87",
+            "Concelho": " Lagos",
+            "População residente": "31049",
+            "% do Total": "0,294",
+            "Habitantes/km2": "145,2",
+            "Hab/km": "92"
+        },
+        {
+            "Posicao": "88",
+            "Concelho": " Santiago do Cacém",
+            "População residente": "29749",
+            "% do Total": "0,282",
+            "Habitantes/km2": "28,1",
+            "Hab/km": "230"
+        },
+        {
+            "Posicao": "89",
+            "Concelho": " Fundão",
+            "População residente": "29213",
+            "% do Total": "0,277",
+            "Habitantes/km2": "41,6",
+            "Hab/km": "199"
+        },
+        {
+            "Posicao": "90",
+            "Concelho": " Anadia",
+            "População residente": "29150",
+            "% do Total": "0,276",
+            "Habitantes/km2": "134,2",
+            "Hab/km": "106"
+        },
+        {
+            "Posicao": "91",
+            "Concelho": " Benavente",
+            "População residente": "29019",
+            "% do Total": "0,275",
+            "Habitantes/km2": "56",
+            "Hab/km": "174"
+        },
+        {
+            "Posicao": "92",
+            "Concelho": " Tondela",
+            "População residente": "28946",
+            "% do Total": "0,274",
+            "Habitantes/km2": "77,8",
+            "Hab/km": "149"
+        },
+        {
+            "Posicao": "93",
+            "Concelho": " Peniche",
+            "População residente": "27753",
+            "% do Total": "0,263",
+            "Habitantes/km2": "357,1",
+            "Hab/km": "45"
+        },
+        {
+            "Posicao": "94",
+            "Concelho": " Estarreja",
+            "População residente": "26997",
+            "% do Total": "0,256",
+            "Habitantes/km2": "249,1",
+            "Hab/km": "62"
+        },
+        {
+            "Posicao": "95",
+            "Concelho": " Lamego",
+            "População residente": "26691",
+            "% do Total": "0,253",
+            "Habitantes/km2": "161,1",
+            "Hab/km": "84"
+        },
+        {
+            "Posicao": "96",
+            "Concelho": " Montemor-o-Velho",
+            "População residente": "26171",
+            "% do Total": "0,248",
+            "Habitantes/km2": "114,3",
+            "Hab/km": "115"
+        },
+        {
+            "Posicao": "97",
+            "Concelho": " Tavira",
+            "População residente": "26167",
+            "% do Total": "0,248",
+            "Habitantes/km2": "42,9",
+            "Hab/km": "196"
+        },
+        {
+            "Posicao": "98",
+            "Concelho": " Odemira",
+            "População residente": "26066",
+            "% do Total": "0,247",
+            "Habitantes/km2": "15,1",
+            "Hab/km": "269"
+        },
+        {
+            "Posicao": "99",
+            "Concelho": " Lourinhã",
+            "População residente": "25735",
+            "% do Total": "0,244",
+            "Habitantes/km2": "175",
+            "Hab/km": "79"
+        },
+        {
+            "Posicao": "100",
+            "Concelho": " Albergaria-a-Velha",
+            "População residente": "25252",
+            "% do Total": "0,239",
+            "Habitantes/km2": "158,6",
+            "Hab/km": "85"
+        },
+        {
+            "Posicao": "101",
+            "Concelho": " Portalegre",
+            "População residente": "24930",
+            "% do Total": "0,236",
+            "Habitantes/km2": "55,4",
+            "Hab/km": "175"
+        },
+        {
+            "Posicao": "102",
+            "Concelho": " Seia",
+            "População residente": "24702",
+            "% do Total": "0,234",
+            "Habitantes/km2": "56,5",
+            "Hab/km": "173"
+        },
+        {
+            "Posicao": "103",
+            "Concelho": " Cartaxo",
+            "População residente": "24462",
+            "% do Total": "0,232",
+            "Habitantes/km2": "155",
+            "Hab/km": "86"
+        },
+        {
+            "Posicao": "104",
+            "Concelho": " Porto de Mós",
+            "População residente": "24342",
+            "% do Total": "0,23",
+            "Habitantes/km2": "92,9",
+            "Hab/km": "129"
+        },
+        {
+            "Posicao": "105",
+            "Concelho": " Mirandela",
+            "População residente": "23850",
+            "% do Total": "0,226",
+            "Habitantes/km2": "36,1",
+            "Hab/km": "210"
+        },
+        {
+            "Posicao": "106",
+            "Concelho": " Vizela",
+            "População residente": "23736",
+            "% do Total": "0,225",
+            "Habitantes/km2": "963,8",
+            "Hab/km": "23"
+        },
+        {
+            "Posicao": "107",
+            "Concelho": " Almeirim",
+            "População residente": "23376",
+            "% do Total": "0,221",
+            "Habitantes/km2": "105,5",
+            "Hab/km": "122"
+        },
+        {
+            "Posicao": "108",
+            "Concelho": " Elvas",
+            "População residente": "23078",
+            "% do Total": "0,218",
+            "Habitantes/km2": "36,4",
+            "Hab/km": "208"
+        },
+        {
+            "Posicao": "109",
+            "Concelho": " Oliveira do Bairro",
+            "População residente": "23028",
+            "% do Total": "0,218",
+            "Habitantes/km2": "264,7",
+            "Hab/km": "59"
+        },
+        {
+            "Posicao": "110",
+            "Concelho": " Lagoa (Algarve)",
+            "População residente": "22975",
+            "% do Total": "0,218",
+            "Habitantes/km2": "259,4",
+            "Hab/km": "60"
+        },
+        {
+            "Posicao": "111",
+            "Concelho": " Vale de Cambra",
+            "População residente": "22864",
+            "% do Total": "0,216",
+            "Habitantes/km2": "155",
+            "Hab/km": "87"
+        },
+        {
+            "Posicao": "112",
+            "Concelho": " Vagos",
+            "População residente": "22851",
+            "% do Total": "0,216",
+            "Habitantes/km2": "138,8",
+            "Hab/km": "100"
+        },
+        {
+            "Posicao": "113",
+            "Concelho": " Arcos de Valdevez",
+            "População residente": "22847",
+            "% do Total": "0,216",
+            "Habitantes/km2": "51",
+            "Hab/km": "181"
+        },
+        {
+            "Posicao": "114",
+            "Concelho": " Arouca",
+            "População residente": "22359",
+            "% do Total": "0,212",
+            "Habitantes/km2": "67,8",
+            "Hab/km": "162"
+        },
+        {
+            "Posicao": "115",
+            "Concelho": " Salvaterra de Magos",
+            "População residente": "22159",
+            "% do Total": "0,21",
+            "Habitantes/km2": "91",
+            "Hab/km": "133"
+        },
+        {
+            "Posicao": "116",
+            "Concelho": " Póvoa de Lanhoso",
+            "População residente": "21886",
+            "% do Total": "0,207",
+            "Habitantes/km2": "165,1",
+            "Hab/km": "82"
+        },
+        {
+            "Posicao": "117",
+            "Concelho": " Machico",
+            "População residente": "21828",
+            "% do Total": "0,207",
+            "Habitantes/km2": "316,9",
+            "Hab/km": "50"
+        },
+        {
+            "Posicao": "118",
+            "Concelho": " Azambuja",
+            "População residente": "21814",
+            "% do Total": "0,207",
+            "Habitantes/km2": "83,6",
+            "Hab/km": "143"
+        },
+        {
+            "Posicao": "119",
+            "Concelho": " São João da Madeira",
+            "População residente": "21713",
+            "% do Total": "0,206",
+            "Habitantes/km2": "2736,5",
+            "Hab/km": "7"
+        },
+        {
+            "Posicao": "120",
+            "Concelho": " Rio Maior",
+            "População residente": "21192",
+            "% do Total": "0,201",
+            "Habitantes/km2": "77,8",
+            "Hab/km": "150"
+        },
+        {
+            "Posicao": "121",
+            "Concelho": " Vila da Praia da Vitória",
+            "População residente": "21035",
+            "% do Total": "0,199",
+            "Habitantes/km2": "131,2",
+            "Hab/km": "107"
+        },
+        {
+            "Posicao": "122",
+            "Concelho": " Oliveira do Hospital",
+            "População residente": "20855",
+            "% do Total": "0,197",
+            "Habitantes/km2": "88,7",
+            "Hab/km": "136"
+        },
+        {
+            "Posicao": "123",
+            "Concelho": " Baião",
+            "População residente": "20522",
+            "% do Total": "0,194",
+            "Habitantes/km2": "117,3",
+            "Hab/km": "113"
+        },
+        {
+            "Posicao": "124",
+            "Concelho": " Mealhada",
+            "População residente": "20428",
+            "% do Total": "0,193",
+            "Habitantes/km2": "184,6",
+            "Hab/km": "75"
+        },
+        {
+            "Posicao": "125",
+            "Concelho": " Cinfães",
+            "População residente": "20427",
+            "% do Total": "0,193",
+            "Habitantes/km2": "85,1",
+            "Hab/km": "141"
+        },
+        {
+            "Posicao": "126",
+            "Concelho": " Entroncamento",
+            "População residente": "20206",
+            "% do Total": "0,191",
+            "Habitantes/km2": "1476,5",
+            "Hab/km": "15"
+        },
+        {
+            "Posicao": "127",
+            "Concelho": " Celorico de Basto",
+            "População residente": "20098",
+            "% do Total": "0,19",
+            "Habitantes/km2": "111,1",
+            "Hab/km": "117"
+        },
+        {
+            "Posicao": "128",
+            "Concelho": " Coruche",
+            "População residente": "19944",
+            "% do Total": "0,189",
+            "Habitantes/km2": "17,8",
+            "Hab/km": "260"
+        },
+        {
+            "Posicao": "129",
+            "Concelho": " Mangualde",
+            "População residente": "19880",
+            "% do Total": "0,188",
+            "Habitantes/km2": "90,5",
+            "Hab/km": "135"
+        },
+        {
+            "Posicao": "130",
+            "Concelho": " Soure",
+            "População residente": "19245",
+            "% do Total": "0,182",
+            "Habitantes/km2": "72,3",
+            "Hab/km": "153"
+        },
+        {
+            "Posicao": "131",
+            "Concelho": " Monção",
+            "População residente": "19230",
+            "% do Total": "0,182",
+            "Habitantes/km2": "91",
+            "Hab/km": "134"
+        },
+        {
+            "Posicao": "132",
+            "Concelho": " Vila Real de Santo António",
+            "População residente": "19156",
+            "% do Total": "0,181",
+            "Habitantes/km2": "312",
+            "Hab/km": "52"
+        },
+        {
+            "Posicao": "133",
+            "Concelho": " Amares",
+            "População residente": "18889",
+            "% do Total": "0,179",
+            "Habitantes/km2": "230,2",
+            "Hab/km": "64"
+        },
+        {
+            "Posicao": "134",
+            "Concelho": " Lousã",
+            "População residente": "17604",
+            "% do Total": "0,167",
+            "Habitantes/km2": "127,1",
+            "Hab/km": "109"
+        },
+        {
+            "Posicao": "135",
+            "Concelho": " Alcochete",
+            "População residente": "17569",
+            "% do Total": "0,166",
+            "Habitantes/km2": "138,2",
+            "Hab/km": "101"
+        },
+        {
+            "Posicao": "136",
+            "Concelho": " Montemor-o-Novo",
+            "População residente": "17437",
+            "% do Total": "0,165",
+            "Habitantes/km2": "14,1",
+            "Hab/km": "272"
+        },
+        {
+            "Posicao": "137",
+            "Concelho": " Peso da Régua",
+            "População residente": "17131",
+            "% do Total": "0,162",
+            "Habitantes/km2": "180,2",
+            "Hab/km": "77"
+        },
+        {
+            "Posicao": "138",
+            "Concelho": " Condeixa-a-Nova",
+            "População residente": "17078",
+            "% do Total": "0,162",
+            "Habitantes/km2": "123,8",
+            "Hab/km": "110"
+        },
+        {
+            "Posicao": "139",
+            "Concelho": " Valpaços",
+            "População residente": "16882",
+            "% do Total": "0,16",
+            "Habitantes/km2": "30,6",
+            "Hab/km": "219"
+        },
+        {
+            "Posicao": "140",
+            "Concelho": " São Pedro do Sul",
+            "População residente": "16851",
+            "% do Total": "0,16",
+            "Habitantes/km2": "48,1",
+            "Hab/km": "185"
+        },
+        {
+            "Posicao": "141",
+            "Concelho": " Castelo de Paiva",
+            "População residente": "16733",
+            "% do Total": "0,158",
+            "Habitantes/km2": "145,2",
+            "Hab/km": "93"
+        },
+        {
+            "Posicao": "142",
+            "Concelho": " Ponte de Sor",
+            "População residente": "16722",
+            "% do Total": "0,158",
+            "Habitantes/km2": "19,8",
+            "Hab/km": "249"
+        },
+        {
+            "Posicao": "143",
+            "Concelho": " Cabeceiras de Basto",
+            "População residente": "16710",
+            "% do Total": "0,158",
+            "Habitantes/km2": "69,1",
+            "Hab/km": "161"
+        },
+        {
+            "Posicao": "144",
+            "Concelho": " Caminha",
+            "População residente": "16684",
+            "% do Total": "0,158",
+            "Habitantes/km2": "122,2",
+            "Hab/km": "111"
+        },
+        {
+            "Posicao": "145",
+            "Concelho": " Sertã",
+            "População residente": "15880",
+            "% do Total": "0,15",
+            "Habitantes/km2": "35,5",
+            "Hab/km": "211"
+        },
+        {
+            "Posicao": "146",
+            "Concelho": " Batalha",
+            "População residente": "15805",
+            "% do Total": "0,15",
+            "Habitantes/km2": "153",
+            "Hab/km": "88"
+        },
+        {
+            "Posicao": "147",
+            "Concelho": " Macedo de Cavaleiros",
+            "População residente": "15776",
+            "% do Total": "0,149",
+            "Habitantes/km2": "22,5",
+            "Hab/km": "243"
+        },
+        {
+            "Posicao": "148",
+            "Concelho": " Serpa",
+            "População residente": "15623",
+            "% do Total": "0,148",
+            "Habitantes/km2": "14,1",
+            "Hab/km": "273"
+        },
+        {
+            "Posicao": "149",
+            "Concelho": " Castro Daire",
+            "População residente": "15339",
+            "% do Total": "0,145",
+            "Habitantes/km2": "40,3",
+            "Hab/km": "202"
+        },
+        {
+            "Posicao": "150",
+            "Concelho": " Penacova",
+            "População residente": "15251",
+            "% do Total": "0,144",
+            "Habitantes/km2": "70,1",
+            "Hab/km": "157"
+        },
+        {
+            "Posicao": "151",
+            "Concelho": " Moura",
+            "População residente": "15167",
+            "% do Total": "0,144",
+            "Habitantes/km2": "15,7",
+            "Hab/km": "264"
+        },
+        {
+            "Posicao": "152",
+            "Concelho": " Nazaré",
+            "População residente": "15158",
+            "% do Total": "0,144",
+            "Habitantes/km2": "183",
+            "Hab/km": "76"
+        },
+        {
+            "Posicao": "153",
+            "Concelho": " Horta",
+            "População residente": "14994",
+            "% do Total": "0,142",
+            "Habitantes/km2": "86,7",
+            "Hab/km": "138"
+        },
+        {
+            "Posicao": "154",
+            "Concelho": " Grândola",
+            "População residente": "14826",
+            "% do Total": "0,14",
+            "Habitantes/km2": "18",
+            "Hab/km": "259"
+        },
+        {
+            "Posicao": "155",
+            "Concelho": " Lagoa (R.A.A.)",
+            "População residente": "14442",
+            "% do Total": "0,137",
+            "Habitantes/km2": "317,4",
+            "Hab/km": "49"
+        },
+        {
+            "Posicao": "156",
+            "Concelho": " Estremoz",
+            "População residente": "14318",
+            "% do Total": "0,136",
+            "Habitantes/km2": "27,7",
+            "Hab/km": "232"
+        },
+        {
+            "Posicao": "157",
+            "Concelho": " Sines",
+            "População residente": "14238",
+            "% do Total": "0,135",
+            "Habitantes/km2": "69,9",
+            "Hab/km": "158"
+        },
+        {
+            "Posicao": "158",
+            "Concelho": " Cadaval",
+            "População residente": "14228",
+            "% do Total": "0,135",
+            "Habitantes/km2": "81,4",
+            "Hab/km": "145"
+        },
+        {
+            "Posicao": "159",
+            "Concelho": " Valença",
+            "População residente": "14127",
+            "% do Total": "0,134",
+            "Habitantes/km2": "120,4",
+            "Hab/km": "112"
+        },
+        {
+            "Posicao": "160",
+            "Concelho": " Gouveia",
+            "População residente": "14046",
+            "% do Total": "0,133",
+            "Habitantes/km2": "46,6",
+            "Hab/km": "188"
+        },
+        {
+            "Posicao": "161",
+            "Concelho": " Nelas",
+            "População residente": "14037",
+            "% do Total": "0,133",
+            "Habitantes/km2": "111,3",
+            "Hab/km": "116"
+        },
+        {
+            "Posicao": "162",
+            "Concelho": " Alcanena",
+            "População residente": "13868",
+            "% do Total": "0,131",
+            "Habitantes/km2": "108,5",
+            "Hab/km": "120"
+        },
+        {
+            "Posicao": "163",
+            "Concelho": " Arruda dos Vinhos",
+            "População residente": "13391",
+            "% do Total": "0,127",
+            "Habitantes/km2": "173,8",
+            "Hab/km": "80"
+        },
+        {
+            "Posicao": "164",
+            "Concelho": " Ribeira Brava",
+            "População residente": "13375",
+            "% do Total": "0,127",
+            "Habitantes/km2": "202,8",
+            "Hab/km": "68"
+        },
+        {
+            "Posicao": "165",
+            "Concelho": " Bombarral",
+            "População residente": "13193",
+            "% do Total": "0,125",
+            "Habitantes/km2": "144,1",
+            "Hab/km": "95"
+        },
+        {
+            "Posicao": "166",
+            "Concelho": " Vila Pouca de Aguiar",
+            "População residente": "13187",
+            "% do Total": "0,125",
+            "Habitantes/km2": "30,1",
+            "Hab/km": "223"
+        },
+        {
+            "Posicao": "167",
+            "Concelho": " Ansião",
+            "População residente": "13128",
+            "% do Total": "0,124",
+            "Habitantes/km2": "74,4",
+            "Hab/km": "151"
+        },
+        {
+            "Posicao": "168",
+            "Concelho": " Miranda do Corvo",
+            "População residente": "13098",
+            "% do Total": "0,124",
+            "Habitantes/km2": "103,8",
+            "Hab/km": "123"
+        },
+        {
+            "Posicao": "169",
+            "Concelho": " Alcácer do Sal",
+            "População residente": "13046",
+            "% do Total": "0,124",
+            "Habitantes/km2": "8,7",
+            "Hab/km": "302"
+        },
+        {
+            "Posicao": "170",
+            "Concelho": " Vieira do Minho",
+            "População residente": "12997",
+            "% do Total": "0,123",
+            "Habitantes/km2": "59,4",
+            "Hab/km": "168"
+        },
+        {
+            "Posicao": "171",
+            "Concelho": " Sabugal",
+            "População residente": "12544",
+            "% do Total": "0,119",
+            "Habitantes/km2": "15,2",
+            "Hab/km": "268"
+        },
+        {
+            "Posicao": "172",
+            "Concelho": " Mira",
+            "População residente": "12465",
+            "% do Total": "0,118",
+            "Habitantes/km2": "100,4",
+            "Hab/km": "126"
+        },
+        {
+            "Posicao": "173",
+            "Concelho": " Sátão",
+            "População residente": "12444",
+            "% do Total": "0,118",
+            "Habitantes/km2": "61,6",
+            "Hab/km": "165"
+        },
+        {
+            "Posicao": "174",
+            "Concelho": " Sever do Vouga",
+            "População residente": "12356",
+            "% do Total": "0,117",
+            "Habitantes/km2": "94,9",
+            "Hab/km": "127"
+        },
+        {
+            "Posicao": "175",
+            "Concelho": " Arganil",
+            "População residente": "12145",
+            "% do Total": "0,115",
+            "Habitantes/km2": "36,4",
+            "Hab/km": "209"
+        },
+        {
+            "Posicao": "176",
+            "Concelho": " Tábua",
+            "População residente": "12071",
+            "% do Total": "0,114",
+            "Habitantes/km2": "60,4",
+            "Hab/km": "166"
+        },
+        {
+            "Posicao": "177",
+            "Concelho": " Ponte da Barca",
+            "População residente": "12061",
+            "% do Total": "0,114",
+            "Habitantes/km2": "66,2",
+            "Hab/km": "164"
+        },
+        {
+            "Posicao": "178",
+            "Concelho": " Alijó",
+            "População residente": "11942",
+            "% do Total": "0,113",
+            "Habitantes/km2": "40",
+            "Hab/km": "203"
+        },
+        {
+            "Posicao": "179",
+            "Concelho": " Vendas Novas",
+            "População residente": "11846",
+            "% do Total": "0,112",
+            "Habitantes/km2": "53,3",
+            "Hab/km": "180"
+        },
+        {
+            "Posicao": "180",
+            "Concelho": " Óbidos",
+            "População residente": "11772",
+            "% do Total": "0,111",
+            "Habitantes/km2": "83,2",
+            "Hab/km": "144"
+        },
+        {
+            "Posicao": "181",
+            "Concelho": " Santa Comba Dão",
+            "População residente": "11597",
+            "% do Total": "0,11",
+            "Habitantes/km2": "103,1",
+            "Hab/km": "124"
+        },
+        {
+            "Posicao": "182",
+            "Concelho": " Calheta (R.A.M.)",
+            "População residente": "11521",
+            "% do Total": "0,109",
+            "Habitantes/km2": "102,9",
+            "Hab/km": "125"
+        },
+        {
+            "Posicao": "183",
+            "Concelho": " Resende",
+            "População residente": "11364",
+            "% do Total": "0,108",
+            "Habitantes/km2": "91,9",
+            "Hab/km": "132"
+        },
+        {
+            "Posicao": "184",
+            "Concelho": " Vila Franca do Campo",
+            "População residente": "11229",
+            "% do Total": "0,106",
+            "Habitantes/km2": "144,1",
+            "Hab/km": "96"
+        },
+        {
+            "Posicao": "185",
+            "Concelho": " Reguengos de Monsaraz",
+            "População residente": "10828",
+            "% do Total": "0,103",
+            "Habitantes/km2": "23,3",
+            "Hab/km": "240"
+        },
+        {
+            "Posicao": "186",
+            "Concelho": " São Brás de Alportel",
+            "População residente": "10662",
+            "% do Total": "0,101",
+            "Habitantes/km2": "69,2",
+            "Hab/km": "160"
+        },
+        {
+            "Posicao": "187",
+            "Concelho": " Murtosa",
+            "População residente": "10585",
+            "% do Total": "0,1",
+            "Habitantes/km2": "144,6",
+            "Hab/km": "94"
+        },
+        {
+            "Posicao": "188",
+            "Concelho": " Vouzela",
+            "População residente": "10564",
+            "% do Total": "0,1",
+            "Habitantes/km2": "54,3",
+            "Hab/km": "178"
+        },
+        {
+            "Posicao": "189",
+            "Concelho": " Montalegre",
+            "População residente": "10537",
+            "% do Total": "0,1",
+            "Habitantes/km2": "13",
+            "Hab/km": "278"
+        },
+        {
+            "Posicao": "190",
+            "Concelho": " Oliveira de Frades",
+            "População residente": "10261",
+            "% do Total": "0,097",
+            "Habitantes/km2": "70,6",
+            "Hab/km": "156"
+        },
+        {
+            "Posicao": "191",
+            "Concelho": " Moimenta da Beira",
+            "População residente": "10212",
+            "% do Total": "0,097",
+            "Habitantes/km2": "46,4",
+            "Hab/km": "189"
+        },
+        {
+            "Posicao": "192",
+            "Concelho": " Sobral de Monte Agraço",
+            "População residente": "10156",
+            "% do Total": "0,096",
+            "Habitantes/km2": "195,2",
+            "Hab/km": "72"
+        },
+        {
+            "Posicao": "193",
+            "Concelho": " Chamusca",
+            "População residente": "10120",
+            "% do Total": "0,096",
+            "Habitantes/km2": "13,5",
+            "Hab/km": "277"
+        },
+        {
+            "Posicao": "194",
+            "Concelho": " Trancoso",
+            "População residente": "9878",
+            "% do Total": "0,094",
+            "Habitantes/km2": "27,3",
+            "Hab/km": "233"
+        },
+        {
+            "Posicao": "195",
+            "Concelho": " Carregal do Sal",
+            "População residente": "9835",
+            "% do Total": "0,093",
+            "Habitantes/km2": "83,9",
+            "Hab/km": "142"
+        },
+        {
+            "Posicao": "196",
+            "Concelho": " Idanha-a-Nova",
+            "População residente": "9716",
+            "% do Total": "0,092",
+            "Habitantes/km2": "6,8",
+            "Hab/km": "306"
+        },
+        {
+            "Posicao": "197",
+            "Concelho": " Pinhel",
+            "População residente": "9627",
+            "% do Total": "0,091",
+            "Habitantes/km2": "19,8",
+            "Hab/km": "250"
+        },
+        {
+            "Posicao": "198",
+            "Concelho": " Mortágua",
+            "População residente": "9607",
+            "% do Total": "0,091",
+            "Habitantes/km2": "38,2",
+            "Hab/km": "206"
+        },
+        {
+            "Posicao": "199",
+            "Concelho": " Mogadouro",
+            "População residente": "9542",
+            "% do Total": "0,09",
+            "Habitantes/km2": "12,5",
+            "Hab/km": "284"
+        },
+        {
+            "Posicao": "200",
+            "Concelho": " Aljustrel",
+            "População residente": "9257",
+            "% do Total": "0,088",
+            "Habitantes/km2": "20,1",
+            "Hab/km": "248"
+        },
+        {
+            "Posicao": "201",
+            "Concelho": " Vila Nova de Cerveira",
+            "População residente": "9253",
+            "% do Total": "0,088",
+            "Habitantes/km2": "85,4",
+            "Hab/km": "140"
+        },
+        {
+            "Posicao": "202",
+            "Concelho": " Melgaço",
+            "População residente": "9213",
+            "% do Total": "0,087",
+            "Habitantes/km2": "38,6",
+            "Hab/km": "205"
+        },
+        {
+            "Posicao": "203",
+            "Concelho": " Paredes de Coura",
+            "População residente": "9198",
+            "% do Total": "0,087",
+            "Habitantes/km2": "66,5",
+            "Hab/km": "163"
+        },
+        {
+            "Posicao": "204",
+            "Concelho": " Vinhais",
+            "População residente": "9066",
+            "% do Total": "0,086",
+            "Habitantes/km2": "13",
+            "Hab/km": "279"
+        },
+        {
+            "Posicao": "205",
+            "Concelho": " Ponta do Sol",
+            "População residente": "8862",
+            "% do Total": "0,084",
+            "Habitantes/km2": "191,3",
+            "Hab/km": "73"
+        },
+        {
+            "Posicao": "206",
+            "Concelho": " Ferreira do Zêzere",
+            "População residente": "8619",
+            "% do Total": "0,082",
+            "Habitantes/km2": "45,2",
+            "Hab/km": "192"
+        },
+        {
+            "Posicao": "207",
+            "Concelho": " Torre de Moncorvo",
+            "População residente": "8572",
+            "% do Total": "0,081",
+            "Habitantes/km2": "16,1",
+            "Hab/km": "262"
+        },
+        {
+            "Posicao": "208",
+            "Concelho": " Campo Maior",
+            "População residente": "8456",
+            "% do Total": "0,08",
+            "Habitantes/km2": "34,2",
+            "Hab/km": "213"
+        },
+        {
+            "Posicao": "209",
+            "Concelho": " Vila Viçosa",
+            "População residente": "8319",
+            "% do Total": "0,079",
+            "Habitantes/km2": "42,6",
+            "Hab/km": "198"
+        },
+        {
+            "Posicao": "210",
+            "Concelho": " Proença-a-Nova",
+            "População residente": "8314",
+            "% do Total": "0,079",
+            "Habitantes/km2": "21",
+            "Hab/km": "247"
+        },
+        {
+            "Posicao": "211",
+            "Concelho": " Ferreira do Alentejo",
+            "População residente": "8255",
+            "% do Total": "0,078",
+            "Habitantes/km2": "12,8",
+            "Hab/km": "281"
+        },
+        {
+            "Posicao": "212",
+            "Concelho": " Tarouca",
+            "População residente": "8048",
+            "% do Total": "0,076",
+            "Habitantes/km2": "80,4",
+            "Hab/km": "147"
+        },
+        {
+            "Posicao": "213",
+            "Concelho": " Penalva do Castelo",
+            "População residente": "7956",
+            "% do Total": "0,075",
+            "Habitantes/km2": "59",
+            "Hab/km": "170"
+        },
+        {
+            "Posicao": "214",
+            "Concelho": " São João da Pesqueira",
+            "População residente": "7874",
+            "% do Total": "0,075",
+            "Habitantes/km2": "29,5",
+            "Hab/km": "225"
+        },
+        {
+            "Posicao": "215",
+            "Concelho": " Santana",
+            "População residente": "7719",
+            "% do Total": "0,073",
+            "Habitantes/km2": "79,9",
+            "Hab/km": "148"
+        },
+        {
+            "Posicao": "216",
+            "Concelho": " Alpiarça",
+            "População residente": "7702",
+            "% do Total": "0,073",
+            "Habitantes/km2": "80,6",
+            "Hab/km": "146"
+        },
+        {
+            "Posicao": "217",
+            "Concelho": " Celorico da Beira",
+            "População residente": "7693",
+            "% do Total": "0,073",
+            "Habitantes/km2": "31",
+            "Hab/km": "218"
+        },
+        {
+            "Posicao": "218",
+            "Concelho": " Mondim de Basto",
+            "População residente": "7493",
+            "% do Total": "0,071",
+            "Habitantes/km2": "43,5",
+            "Hab/km": "194"
+        },
+        {
+            "Posicao": "219",
+            "Concelho": " Miranda do Douro",
+            "População residente": "7482",
+            "% do Total": "0,071",
+            "Habitantes/km2": "15,4",
+            "Hab/km": "266"
+        },
+        {
+            "Posicao": "220",
+            "Concelho": " Nisa",
+            "População residente": "7450",
+            "% do Total": "0,071",
+            "Habitantes/km2": "12,9",
+            "Hab/km": "280"
+        },
+        {
+            "Posicao": "221",
+            "Concelho": " Almodôvar",
+            "População residente": "7449",
+            "% do Total": "0,071",
+            "Habitantes/km2": "9,5",
+            "Hab/km": "298"
+        },
+        {
+            "Posicao": "222",
+            "Concelho": " Arraiolos",
+            "População residente": "7363",
+            "% do Total": "0,07",
+            "Habitantes/km2": "10,8",
+            "Hab/km": "289"
+        },
+        {
+            "Posicao": "223",
+            "Concelho": " Santa Marta de Penaguião",
+            "População residente": "7356",
+            "% do Total": "0,07",
+            "Habitantes/km2": "105,7",
+            "Hab/km": "121"
+        },
+        {
+            "Posicao": "224",
+            "Concelho": " Mação",
+            "População residente": "7338",
+            "% do Total": "0,069",
+            "Habitantes/km2": "18,3",
+            "Hab/km": "253"
+        },
+        {
+            "Posicao": "225",
+            "Concelho": " Borba",
+            "População residente": "7333",
+            "% do Total": "0,069",
+            "Habitantes/km2": "50,5",
+            "Hab/km": "182"
+        },
+        {
+            "Posicao": "226",
+            "Concelho": " Vila Nova da Barquinha",
+            "População residente": "7322",
+            "% do Total": "0,069",
+            "Habitantes/km2": "148",
+            "Hab/km": "90"
+        },
+        {
+            "Posicao": "227",
+            "Concelho": " Vila Nova de Foz Côa",
+            "População residente": "7312",
+            "% do Total": "0,069",
+            "Habitantes/km2": "18,3",
+            "Hab/km": "254"
+        },
+        {
+            "Posicao": "228",
+            "Concelho": " Alvaiázere",
+            "População residente": "7287",
+            "% do Total": "0,069",
+            "Habitantes/km2": "45,3",
+            "Hab/km": "191"
+        },
+        {
+            "Posicao": "229",
+            "Concelho": " Vila Nova de Poiares",
+            "População residente": "7281",
+            "% do Total": "0,069",
+            "Habitantes/km2": "86,2",
+            "Hab/km": "139"
+        },
+        {
+            "Posicao": "230",
+            "Concelho": " Castro Verde",
+            "População residente": "7276",
+            "% do Total": "0,069",
+            "Habitantes/km2": "12,8",
+            "Hab/km": "282"
+        },
+        {
+            "Posicao": "231",
+            "Concelho": " Mértola",
+            "População residente": "7274",
+            "% do Total": "0,069",
+            "Habitantes/km2": "5,6",
+            "Hab/km": "307"
+        },
+        {
+            "Posicao": "232",
+            "Concelho": " Terras de Bouro",
+            "População residente": "7253",
+            "% do Total": "0,069",
+            "Habitantes/km2": "26",
+            "Hab/km": "235"
+        },
+        {
+            "Posicao": "233",
+            "Concelho": " Almeida",
+            "População residente": "7242",
+            "% do Total": "0,069",
+            "Habitantes/km2": "13,8",
+            "Hab/km": "275"
+        },
+        {
+            "Posicao": "234",
+            "Concelho": " Redondo",
+            "População residente": "7031",
+            "% do Total": "0,067",
+            "Habitantes/km2": "19",
+            "Hab/km": "251"
+        },
+        {
+            "Posicao": "235",
+            "Concelho": " Belmonte",
+            "População residente": "6859",
+            "% do Total": "0,065",
+            "Habitantes/km2": "57,6",
+            "Hab/km": "171"
+        },
+        {
+            "Posicao": "236",
+            "Concelho": " Castro Marim",
+            "População residente": "6747",
+            "% do Total": "0,064",
+            "Habitantes/km2": "22,3",
+            "Hab/km": "244"
+        },
+        {
+            "Posicao": "237",
+            "Concelho": " Vila Flor",
+            "População residente": "6697",
+            "% do Total": "0,063",
+            "Habitantes/km2": "25,1",
+            "Hab/km": "236"
+        },
+        {
+            "Posicao": "238",
+            "Concelho": " Ribeira de Pena",
+            "População residente": "6544",
+            "% do Total": "0,062",
+            "Habitantes/km2": "30,1",
+            "Hab/km": "224"
+        },
+        {
+            "Posicao": "239",
+            "Concelho": " Portel",
+            "População residente": "6428",
+            "% do Total": "0,061",
+            "Habitantes/km2": "10,7",
+            "Hab/km": "291"
+        },
+        {
+            "Posicao": "240",
+            "Concelho": " Carrazeda de Ansiães",
+            "População residente": "6373",
+            "% do Total": "0,06",
+            "Habitantes/km2": "22,7",
+            "Hab/km": "241"
+        },
+        {
+            "Posicao": "241",
+            "Concelho": " Sabrosa",
+            "População residente": "6361",
+            "% do Total": "0,06",
+            "Habitantes/km2": "40,5",
+            "Hab/km": "201"
+        },
+        {
+            "Posicao": "242",
+            "Concelho": " Tabuaço",
+            "População residente": "6350",
+            "% do Total": "0,06",
+            "Habitantes/km2": "47,5",
+            "Hab/km": "186"
+        },
+        {
+            "Posicao": "243",
+            "Concelho": " Povoação",
+            "População residente": "6327",
+            "% do Total": "0,06",
+            "Habitantes/km2": "59,3",
+            "Hab/km": "169"
+        },
+        {
+            "Posicao": "244",
+            "Concelho": " Armamar",
+            "População residente": "6297",
+            "% do Total": "0,06",
+            "Habitantes/km2": "53,7",
+            "Hab/km": "179"
+        },
+        {
+            "Posicao": "245",
+            "Concelho": " Figueira de Castelo Rodrigo",
+            "População residente": "6260",
+            "% do Total": "0,059",
+            "Habitantes/km2": "12,3",
+            "Hab/km": "285"
+        },
+        {
+            "Posicao": "246",
+            "Concelho": " Figueiró dos Vinhos",
+            "População residente": "6169",
+            "% do Total": "0,058",
+            "Habitantes/km2": "35,4",
+            "Hab/km": "212"
+        },
+        {
+            "Posicao": "247",
+            "Concelho": " Madalena",
+            "População residente": "6049",
+            "% do Total": "0,057",
+            "Habitantes/km2": "41",
+            "Hab/km": "200"
+        },
+        {
+            "Posicao": "248",
+            "Concelho": " Monchique",
+            "População residente": "6045",
+            "% do Total": "0,057",
+            "Habitantes/km2": "15,1",
+            "Hab/km": "270"
+        },
+        {
+            "Posicao": "249",
+            "Concelho": " Penela",
+            "População residente": "5983",
+            "% do Total": "0,057",
+            "Habitantes/km2": "44,2",
+            "Hab/km": "193"
+        },
+        {
+            "Posicao": "250",
+            "Concelho": " Murça",
+            "População residente": "5952",
+            "% do Total": "0,056",
+            "Habitantes/km2": "31,4",
+            "Hab/km": "216"
+        },
+        {
+            "Posicao": "251",
+            "Concelho": " Vidigueira",
+            "População residente": "5932",
+            "% do Total": "0,056",
+            "Habitantes/km2": "18,7",
+            "Hab/km": "252"
+        },
+        {
+            "Posicao": "252",
+            "Concelho": " Aljezur",
+            "População residente": "5884",
+            "% do Total": "0,056",
+            "Habitantes/km2": "18,1",
+            "Hab/km": "255"
+        },
+        {
+            "Posicao": "253",
+            "Concelho": " Alandroal",
+            "População residente": "5843",
+            "% do Total": "0,055",
+            "Habitantes/km2": "10,7",
+            "Hab/km": "292"
+        },
+        {
+            "Posicao": "254",
+            "Concelho": " Boticas",
+            "População residente": "5750",
+            "% do Total": "0,054",
+            "Habitantes/km2": "17,8",
+            "Hab/km": "261"
+        },
+        {
+            "Posicao": "255",
+            "Concelho": " Viana do Alentejo",
+            "População residente": "5743",
+            "% do Total": "0,054",
+            "Habitantes/km2": "14,6",
+            "Hab/km": "271"
+        },
+        {
+            "Posicao": "256",
+            "Concelho": " São Vicente",
+            "População residente": "5723",
+            "% do Total": "0,054",
+            "Habitantes/km2": "71,8",
+            "Hab/km": "154"
+        },
+        {
+            "Posicao": "257",
+            "Concelho": " Oleiros",
+            "População residente": "5721",
+            "% do Total": "0,054",
+            "Habitantes/km2": "12,1",
+            "Hab/km": "286"
+        },
+        {
+            "Posicao": "258",
+            "Concelho": " Penamacor",
+            "População residente": "5682",
+            "% do Total": "0,054",
+            "Habitantes/km2": "10",
+            "Hab/km": "294"
+        },
+        {
+            "Posicao": "259",
+            "Concelho": " Sernancelhe",
+            "População residente": "5671",
+            "% do Total": "0,054",
+            "Habitantes/km2": "24,8",
+            "Hab/km": "237"
+        },
+        {
+            "Posicao": "260",
+            "Concelho": " Vila do Porto",
+            "População residente": "5552",
+            "% do Total": "0,053",
+            "Habitantes/km2": "57,5",
+            "Hab/km": "172"
+        },
+        {
+            "Posicao": "261",
+            "Concelho": " Porto Santo",
+            "População residente": "5483",
+            "% do Total": "0,052",
+            "Habitantes/km2": "127,6",
+            "Hab/km": "108"
+        },
+        {
+            "Posicao": "262",
+            "Concelho": " Aguiar da Beira",
+            "População residente": "5473",
+            "% do Total": "0,052",
+            "Habitantes/km2": "26,4",
+            "Hab/km": "234"
+        },
+        {
+            "Posicao": "263",
+            "Concelho": " Golegã",
+            "População residente": "5465",
+            "% do Total": "0,052",
+            "Habitantes/km2": "71,2",
+            "Hab/km": "155"
+        },
+        {
+            "Posicao": "264",
+            "Concelho": " Velas",
+            "População residente": "5398",
+            "% do Total": "0,051",
+            "Habitantes/km2": "46",
+            "Hab/km": "190"
+        },
+        {
+            "Posicao": "265",
+            "Concelho": " Ourique",
+            "População residente": "5389",
+            "% do Total": "0,051",
+            "Habitantes/km2": "8,1",
+            "Hab/km": "303"
+        },
+        {
+            "Posicao": "266",
+            "Concelho": " Vila do Bispo",
+            "População residente": "5258",
+            "% do Total": "0,05",
+            "Habitantes/km2": "29,3",
+            "Hab/km": "228"
+        },
+        {
+            "Posicao": "267",
+            "Concelho": " Mêda",
+            "População residente": "5202",
+            "% do Total": "0,049",
+            "Habitantes/km2": "18,1",
+            "Hab/km": "256"
+        },
+        {
+            "Posicao": "268",
+            "Concelho": " Vila Nova de Paiva",
+            "População residente": "5176",
+            "% do Total": "0,049",
+            "Habitantes/km2": "29,4",
+            "Hab/km": "227"
+        },
+        {
+            "Posicao": "269",
+            "Concelho": " Alfândega da Fé",
+            "População residente": "5104",
+            "% do Total": "0,048",
+            "Habitantes/km2": "15,7",
+            "Hab/km": "265"
+        },
+        {
+            "Posicao": "270",
+            "Concelho": " Sousel",
+            "População residente": "5074",
+            "% do Total": "0,048",
+            "Habitantes/km2": "18,1",
+            "Hab/km": "257"
+        },
+        {
+            "Posicao": "271",
+            "Concelho": " Fornos de Algodres",
+            "População residente": "4989",
+            "% do Total": "0,047",
+            "Habitantes/km2": "37,9",
+            "Hab/km": "207"
+        },
+        {
+            "Posicao": "272",
+            "Concelho": " Mora",
+            "População residente": "4978",
+            "% do Total": "0,047",
+            "Habitantes/km2": "11,1",
+            "Hab/km": "288"
+        },
+        {
+            "Posicao": "273",
+            "Concelho": " Nordeste",
+            "População residente": "4937",
+            "% do Total": "0,047",
+            "Habitantes/km2": "48,9",
+            "Hab/km": "184"
+        },
+        {
+            "Posicao": "274",
+            "Concelho": " Cuba",
+            "População residente": "4878",
+            "% do Total": "0,046",
+            "Habitantes/km2": "28,4",
+            "Hab/km": "229"
+        },
+        {
+            "Posicao": "275",
+            "Concelho": " Lajes do Pico",
+            "População residente": "4711",
+            "% do Total": "0,045",
+            "Habitantes/km2": "30,4",
+            "Hab/km": "220"
+        },
+        {
+            "Posicao": "276",
+            "Concelho": " Vimioso",
+            "População residente": "4669",
+            "% do Total": "0,044",
+            "Habitantes/km2": "9,7",
+            "Hab/km": "297"
+        },
+        {
+            "Posicao": "277",
+            "Concelho": " Avis",
+            "População residente": "4571",
+            "% do Total": "0,043",
+            "Habitantes/km2": "7,6",
+            "Hab/km": "305"
+        },
+        {
+            "Posicao": "278",
+            "Concelho": " Pampilhosa da Serra",
+            "População residente": "4481",
+            "% do Total": "0,042",
+            "Habitantes/km2": "11,3",
+            "Hab/km": "287"
+        },
+        {
+            "Posicao": "279",
+            "Concelho": " Mesão Frio",
+            "População residente": "4433",
+            "% do Total": "0,042",
+            "Habitantes/km2": "165,7",
+            "Hab/km": "81"
+        },
+        {
+            "Posicao": "280",
+            "Concelho": " Santa Cruz da Graciosa",
+            "População residente": "4391",
+            "% do Total": "0,042",
+            "Habitantes/km2": "72,6",
+            "Hab/km": "152"
+        },
+        {
+            "Posicao": "281",
+            "Concelho": " Góis",
+            "População residente": "4260",
+            "% do Total": "0,04",
+            "Habitantes/km2": "16,1",
+            "Hab/km": "263"
+        },
+        {
+            "Posicao": "282",
+            "Concelho": " Gavião",
+            "População residente": "4132",
+            "% do Total": "0,039",
+            "Habitantes/km2": "14",
+            "Hab/km": "274"
+        },
+        {
+            "Posicao": "283",
+            "Concelho": " Constância",
+            "População residente": "4056",
+            "% do Total": "0,038",
+            "Habitantes/km2": "50,4",
+            "Hab/km": "183"
+        },
+        {
+            "Posicao": "284",
+            "Concelho": " Sardoal",
+            "População residente": "3939",
+            "% do Total": "0,037",
+            "Habitantes/km2": "42,8",
+            "Hab/km": "197"
+        },
+        {
+            "Posicao": "285",
+            "Concelho": " Pedrógão Grande",
+            "População residente": "3915",
+            "% do Total": "0,037",
+            "Habitantes/km2": "30,2",
+            "Hab/km": "221"
+        },
+        {
+            "Posicao": "286",
+            "Concelho": " Freixo de Espada à Cinta",
+            "População residente": "3780",
+            "% do Total": "0,036",
+            "Habitantes/km2": "15,4",
+            "Hab/km": "267"
+        },
+        {
+            "Posicao": "287",
+            "Concelho": " Calheta (R.A.A.)",
+            "População residente": "3773",
+            "% do Total": "0,036",
+            "Habitantes/km2": "29,5",
+            "Hab/km": "226"
+        },
+        {
+            "Posicao": "288",
+            "Concelho": " Crato",
+            "População residente": "3708",
+            "% do Total": "0,035",
+            "Habitantes/km2": "9,3",
+            "Hab/km": "301"
+        },
+        {
+            "Posicao": "289",
+            "Concelho": " Alter do Chão",
+            "População residente": "3562",
+            "% do Total": "0,034",
+            "Habitantes/km2": "9,9",
+            "Hab/km": "296"
+        },
+        {
+            "Posicao": "290",
+            "Concelho": " Vila Velha de Ródão",
+            "População residente": "3521",
+            "% do Total": "0,033",
+            "Habitantes/km2": "10,7",
+            "Hab/km": "293"
+        },
+        {
+            "Posicao": "291",
+            "Concelho": " Marvão",
+            "População residente": "3512",
+            "% do Total": "0,033",
+            "Habitantes/km2": "22,6",
+            "Hab/km": "242"
+        },
+        {
+            "Posicao": "292",
+            "Concelho": " Vila de Rei",
+            "População residente": "3452",
+            "% do Total": "0,033",
+            "Habitantes/km2": "18,1",
+            "Hab/km": "258"
+        },
+        {
+            "Posicao": "293",
+            "Concelho": " Manteigas",
+            "População residente": "3430",
+            "% do Total": "0,032",
+            "Habitantes/km2": "28,1",
+            "Hab/km": "231"
+        },
+        {
+            "Posicao": "294",
+            "Concelho": " Fronteira",
+            "População residente": "3410",
+            "% do Total": "0,032",
+            "Habitantes/km2": "13,7",
+            "Hab/km": "276"
+        },
+        {
+            "Posicao": "295",
+            "Concelho": " Castelo de Vide",
+            "População residente": "3407",
+            "% do Total": "0,032",
+            "Habitantes/km2": "12,8",
+            "Hab/km": "283"
+        },
+        {
+            "Posicao": "296",
+            "Concelho": " São Roque do Pico",
+            "População residente": "3388",
+            "% do Total": "0,032",
+            "Habitantes/km2": "23,8",
+            "Hab/km": "239"
+        },
+        {
+            "Posicao": "297",
+            "Concelho": " Monforte",
+            "População residente": "3329",
+            "% do Total": "0,032",
+            "Habitantes/km2": "7,9",
+            "Hab/km": "304"
+        },
+        {
+            "Posicao": "298",
+            "Concelho": " Castanheira de Pera",
+            "População residente": "3191",
+            "% do Total": "0,03",
+            "Habitantes/km2": "47,4",
+            "Hab/km": "187"
+        },
+        {
+            "Posicao": "299",
+            "Concelho": " Arronches",
+            "População residente": "3165",
+            "% do Total": "0,03",
+            "Habitantes/km2": "10",
+            "Hab/km": "295"
+        },
+        {
+            "Posicao": "300",
+            "Concelho": " Penedono",
+            "População residente": "2952",
+            "% do Total": "0,028",
+            "Habitantes/km2": "22",
+            "Hab/km": "245"
+        },
+        {
+            "Posicao": "301",
+            "Concelho": " Alcoutim",
+            "População residente": "2917",
+            "% do Total": "0,028",
+            "Habitantes/km2": "5",
+            "Hab/km": "308"
+        },
+        {
+            "Posicao": "302",
+            "Concelho": " Porto Moniz",
+            "População residente": "2711",
+            "% do Total": "0,026",
+            "Habitantes/km2": "32,3",
+            "Hab/km": "214"
+        },
+        {
+            "Posicao": "303",
+            "Concelho": " Mourão",
+            "População residente": "2663",
+            "% do Total": "0,025",
+            "Habitantes/km2": "9,5",
+            "Hab/km": "299"
+        },
+        {
+            "Posicao": "304",
+            "Concelho": " Alvito",
+            "População residente": "2504",
+            "% do Total": "0,024",
+            "Habitantes/km2": "9,5",
+            "Hab/km": "300"
+        },
+        {
+            "Posicao": "305",
+            "Concelho": " Santa Cruz das Flores",
+            "População residente": "2289",
+            "% do Total": "0,022",
+            "Habitantes/km2": "32,3",
+            "Hab/km": "215"
+        },
+        {
+            "Posicao": "306",
+            "Concelho": " Barrancos",
+            "População residente": "1834",
+            "% do Total": "0,017",
+            "Habitantes/km2": "10,8",
+            "Hab/km": "290"
+        },
+        {
+            "Posicao": "307",
+            "Concelho": " Lajes das Flores",
+            "População residente": "1504",
+            "% do Total": "0,014",
+            "Habitantes/km2": "21,7",
+            "Hab/km": "246"
+        },
+        {
+            "Posicao": "308",
+            "Concelho": " Corvo",
+            "População residente": "430",
+            "% do Total": "0,004",
+            "Habitantes/km2": "24,7",
+            "Hab/km": "238"
+        }
+    ]
+}
