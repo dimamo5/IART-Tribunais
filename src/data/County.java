@@ -9,6 +9,23 @@ public class County {
     private int position;
     private String name;
     private int population;
+
+    public int getPosition() {
+        return position;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
+    public double getPercTotal() {
+        return percTotal;
+    }
+
     private double percTotal;
     private double latitude;
     private double longitude;

@@ -1,5 +1,6 @@
 package ga;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -10,7 +11,7 @@ public class Population {
 
     final static int ELITISM_K = 5;
     final static int POP_SIZE = 200 + ELITISM_K;  // population size
-    final static int MAX_ITER = 2000;             // max number of iterations
+    final static int MAX_ITER = 3000;             // max number of iterations
     final static double MUTATION_RATE = 0.05;     // probability of mutation
     final static double CROSSOVER_RATE = 0.7;     // probability of crossover
 
@@ -110,8 +111,10 @@ public class Population {
 
         // current population
         System.out.print("Total Fitness = " + pop.totalFitness);
-        System.out.println(" ; Best Fitness = " +
+        System.out.print(" ; Best Fitness = " +
                 pop.findBestIndividual().getFitnessValue());
+        System.out.println(" ; Best Individual = " +
+                pop.findBestIndividual());
 
         // main loop
         int count;
@@ -153,8 +156,10 @@ public class Population {
             // reevaluate current population
             pop.evaluate();
             System.out.print("Total Fitness = " + pop.totalFitness);
-            System.out.println(" ; Best Fitness = " +
+            System.out.print(" ; Best Fitness = " +
                     pop.findBestIndividual().getFitnessValue());
+            System.out.println(" ; Best Individual = " +
+                    Arrays.toString(pop.findBestIndividual().getGenes()));
         }
 
         // best indiv

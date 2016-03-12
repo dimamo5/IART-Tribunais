@@ -4,27 +4,44 @@
 
 package ga;
 
+import data.Database;
+
+import java.util.Arrays;
 import java.util.Random;
 
 public class Individual {
 
-    public static final int SIZE = 500;
-    private int[] genes = new int[SIZE];
-    private int fitnessValue;
+    public static int SIZE;
+    private int[] genes;
+    private int fitness;
+
+    Database counties = Database.getInstance();
 
     public Individual() {
+        this.SIZE = counties.getSize();
+        this.genes = new int[SIZE];
+        ;
+    }
+
+    @Override
+    public String toString() {
+        return "Individual{" +
+                "genes=" + Arrays.toString(genes) +
+                ", fitness=" + fitness +
+                ", counties=" + counties +
+                '}';
     }
 
     public int getFitnessValue() {
-        return fitnessValue;
-    }
-
-    public void setFitnessValue(int fitnessValue) {
-        this.fitnessValue = fitnessValue;
+        return fitness;
     }
 
     public int getGene(int index) {
         return genes[index];
+    }
+
+    public int[] getGenes() {
+        return genes;
     }
 
     public void setGene(int index, int gene) {
@@ -33,23 +50,32 @@ public class Individual {
 
     public void randGenes() {
         Random rand = new Random();
-        for (int i = 0; i < SIZE; ++i) {
+        for (int i = 0; i < this.SIZE; ++i) {
             this.setGene(i, rand.nextInt(2));
         }
     }
 
     public void mutate() {
         Random rand = new Random();
-        int index = rand.nextInt(SIZE);
+        int index = rand.nextInt(this.SIZE);
         this.setGene(index, 1 - this.getGene(index));    // flip
     }
 
     public int evaluate() {
         int fitness = 0;
-        for (int i = 0; i < SIZE; ++i) {
-            fitness += this.getGene(i);
+        int count = 0;
+        for (int i = 0; i < this.SIZE; ++i) {
+
+            count += this.genes[i];
+
+            if (this.genes[i] == 1)
+                fitness += this.counties.getCounty(i).getPopulation();
         }
-        this.setFitnessValue(fitness);
+
+        if (count > 200) {
+            fitness = 0;
+        }
+        this.fitness = fitness;
 
         return fitness;
     }
