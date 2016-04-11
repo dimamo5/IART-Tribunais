@@ -2,7 +2,7 @@
  * Created by diogo on 10/03/2016.
  */
 
-package ga;
+package Algorithm;
 
 import data.Database;
 
@@ -20,7 +20,13 @@ public class Individual {
     public Individual() {
         this.SIZE = counties.getSize();
         this.genes = new int[SIZE];
-        ;
+
+    }
+
+    public Individual(Individual ind) {
+        this.genes = Arrays.copyOf(ind.getGenes(), ind.getGenes().length);
+        this.fitness = ind.getFitnessValue();
+
     }
 
     @Override
@@ -28,7 +34,6 @@ public class Individual {
         return "Individual{" +
                 "genes=" + Arrays.toString(genes) +
                 ", fitness=" + fitness +
-                ", counties=" + counties +
                 '}';
     }
 
@@ -65,18 +70,13 @@ public class Individual {
         int fitness = 0;
         int count = 0;
         for (int i = 0; i < this.SIZE; ++i) {
-
-            count += this.genes[i];
-
             if (this.genes[i] == 1)
                 fitness += this.counties.getCounty(i).getPopulation();
         }
 
-        if (count > 200) {
-            fitness = 0;
-        }
         this.fitness = fitness;
 
         return fitness;
     }
+
 }

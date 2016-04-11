@@ -60,6 +60,8 @@ public class ParseCounty {
             System.out.print('.');
 
         }
+
+        System.out.println("");
         return listCounties;
     }
 
