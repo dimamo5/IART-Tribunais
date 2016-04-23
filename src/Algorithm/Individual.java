@@ -15,10 +15,10 @@ public class Individual {
     private int[] genes;
     private int fitness;
 
-    Database counties = Database.getInstance();
+    private Database counties = Database.getInstance();
 
     public Individual() {
-        this.SIZE = counties.getSize();
+        SIZE = counties.getSize();
         this.genes = new int[SIZE];
 
     }
@@ -26,7 +26,6 @@ public class Individual {
     public Individual(Individual ind) {
         this.genes = Arrays.copyOf(ind.getGenes(), ind.getGenes().length);
         this.fitness = ind.getFitnessValue();
-
     }
 
     @Override
@@ -55,21 +54,21 @@ public class Individual {
 
     public void randGenes() {
         Random rand = new Random();
-        for (int i = 0; i < this.SIZE; ++i) {
+        for (int i = 0; i < SIZE; ++i) {
             this.setGene(i, rand.nextInt(2));
         }
     }
 
     public void mutate() {
         Random rand = new Random();
-        int index = rand.nextInt(this.SIZE);
+        int index = rand.nextInt(SIZE);
         this.setGene(index, 1 - this.getGene(index));    // flip
     }
 
     public int evaluate() {
         int fitness = 0;
         int count = 0;
-        for (int i = 0; i < this.SIZE; ++i) {
+        for (int i = 0; i < SIZE; ++i) {
             if (this.genes[i] == 1)
                 fitness += this.counties.getCounty(i).getPopulation();
         }

@@ -9,11 +9,11 @@ import java.util.Random;
 
 public class Population {
 
-    final static int ELITISM_K = 5;
-    final static int POP_SIZE = 200 + ELITISM_K;  // population size
-    final static int MAX_ITER = 2;             // max number of iterations
-    final static double MUTATION_RATE = 0.1;     // probability of mutation
-    final static double CROSSOVER_RATE = 0.75;     // probability of crossover
+    private final static int ELITISM_K = 5;
+    private final static int POP_SIZE = 200 + ELITISM_K;  // population size
+    private final static int MAX_ITER = 2;             // max number of iterations
+    private final static double MUTATION_RATE = 0.1;     // probability of mutation
+    private final static double CROSSOVER_RATE = 0.75;     // probability of crossover
 
     private static Random m_rand = new Random();  // random-number generator
     private Individual[] m_population;
@@ -25,6 +25,7 @@ public class Population {
         // init population
         for (int i = 0; i < POP_SIZE; i++) {
             m_population[i] = new Individual();
+            //Inicializa genes com valor random
             m_population[i].randGenes();
         }
 

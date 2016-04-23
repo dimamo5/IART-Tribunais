@@ -208,15 +208,6 @@
             "longitude": -8.6178922
         },
         {
-            "construction cost": 666.0,
-            "latitude": 32.6669328,
-            "name": "Funchal",
-            "position": 24,
-            "population": 111892,
-            "percTotal": 1.059,
-            "longitude": -16.9240554
-        },
-        {
             "construction cost": 770.0,
             "latitude": 40.6565861,
             "name": "Viseu",
@@ -323,15 +314,6 @@
             "population": 70622,
             "percTotal": 0.669,
             "longitude": -8.020216
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 37.7428301,
-            "name": "Ponta Delgada",
-            "position": 37,
-            "population": 68809,
-            "percTotal": 0.651,
-            "longitude": -25.6805868
         },
         {
             "construction cost": 600.0,
@@ -604,15 +586,6 @@
             "longitude": -9.014003299999999
         },
         {
-            "construction cost": 600.0,
-            "latitude": 32.6892815,
-            "name": "Santa Cruz",
-            "position": 68,
-            "population": 43005,
-            "percTotal": 0.407,
-            "longitude": -16.7907398
-        },
-        {
             "construction cost": 678.0,
             "latitude": 40.5383482,
             "name": "Guarda",
@@ -721,24 +694,6 @@
             "longitude": -7.8627308
         },
         {
-            "construction cost": 600.0,
-            "latitude": 32.6610892,
-            "name": "Câmara de Lobos",
-            "position": 81,
-            "population": 35666,
-            "percTotal": 0.338,
-            "longitude": -16.9860384
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 38.6635375,
-            "name": "Angra do Heroísmo",
-            "position": 82,
-            "population": 35402,
-            "percTotal": 0.335,
-            "longitude": -27.2293969
-        },
-        {
             "construction cost": 579.0,
             "latitude": 41.8061131,
             "name": "Bragança",
@@ -755,15 +710,6 @@
             "population": 34254,
             "percTotal": 0.324,
             "longitude": -8.7805652
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 37.8210369,
-            "name": "Ribeira Grande",
-            "position": 85,
-            "population": 32112,
-            "percTotal": 0.304,
-            "longitude": -25.5148137
         },
         {
             "construction cost": 1.064,
@@ -1045,15 +991,6 @@
             "longitude": -8.2689012
         },
         {
-            "construction cost": 597.0,
-            "latitude": 32.7318412,
-            "name": "Machico",
-            "position": 117,
-            "population": 21828,
-            "percTotal": 0.207,
-            "longitude": -16.791291
-        },
-        {
             "construction cost": 829.0,
             "latitude": 39.0696027,
             "name": "Azambuja",
@@ -1079,15 +1016,6 @@
             "population": 21192,
             "percTotal": 0.201,
             "longitude": -8.942707600000002
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 38.7339162,
-            "name": "Vila da Praia da Vitória",
-            "position": 121,
-            "population": 21035,
-            "percTotal": 0.199,
-            "longitude": -27.0646976
         },
         {
             "construction cost": 600.0,
@@ -1369,15 +1297,6 @@
             "longitude": -9.0700991
         },
         {
-            "construction cost": 645.0,
-            "latitude": 38.5348447,
-            "name": "Horta",
-            "position": 153,
-            "population": 14994,
-            "percTotal": 0.142,
-            "longitude": -28.6299812
-        },
-        {
             "construction cost": 2.915,
             "latitude": 38.1762557,
             "name": "Grândola",
@@ -1385,15 +1304,6 @@
             "population": 14826,
             "percTotal": 0.14,
             "longitude": -8.5662971
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 37.1356631,
-            "name": "Lagoa (R.A.A.)",
-            "position": 155,
-            "population": 14442,
-            "percTotal": 0.137,
-            "longitude": -8.451722799999999
         },
         {
             "construction cost": 600.0,
@@ -1466,15 +1376,6 @@
             "population": 13391,
             "percTotal": 0.127,
             "longitude": -9.0774591
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 32.6739884,
-            "name": "Ribeira Brava",
-            "position": 164,
-            "population": 13375,
-            "percTotal": 0.127,
-            "longitude": -17.0509906
         },
         {
             "construction cost": 737.0,
@@ -1628,15 +1529,6 @@
             "population": 11597,
             "percTotal": 0.11,
             "longitude": -8.150243300000001
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 32.7379818,
-            "name": "Calheta (R.A.M.)",
-            "position": 182,
-            "population": 11521,
-            "percTotal": 0.109,
-            "longitude": -17.180948
         },
         {
             "construction cost": 600.0,
@@ -1838,15 +1730,6 @@
         },
         {
             "construction cost": 600.0,
-            "latitude": 32.6854883,
-            "name": "Ponta do Sol",
-            "position": 205,
-            "population": 8862,
-            "percTotal": 0.084,
-            "longitude": -17.0864266
-        },
-        {
-            "construction cost": 600.0,
             "latitude": 39.6932144,
             "name": "Ferreira do Zêzere",
             "position": 206,
@@ -1925,15 +1808,6 @@
             "population": 7874,
             "percTotal": 0.075,
             "longitude": -7.405053300000001
-        },
-        {
-            "construction cost": 941.0,
-            "latitude": 32.8018761,
-            "name": "Santana",
-            "position": 215,
-            "population": 7719,
-            "percTotal": 0.073,
-            "longitude": -16.879792
         },
         {
             "construction cost": 877.0,
@@ -2215,15 +2089,6 @@
             "longitude": -8.2801574
         },
         {
-            "construction cost": 705.0,
-            "latitude": 38.5298862,
-            "name": "Madalena",
-            "position": 247,
-            "population": 6049,
-            "percTotal": 0.057,
-            "longitude": -28.5185092
-        },
-        {
             "construction cost": 600.0,
             "latitude": 37.3179879,
             "name": "Monchique",
@@ -2333,24 +2198,6 @@
         },
         {
             "construction cost": 600.0,
-            "latitude": 36.9568037,
-            "name": "Vila do Porto",
-            "position": 260,
-            "population": 5552,
-            "percTotal": 0.053,
-            "longitude": -25.1412316
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 33.0759749,
-            "name": "Porto Santo",
-            "position": 261,
-            "population": 5483,
-            "percTotal": 0.052,
-            "longitude": -16.3346061
-        },
-        {
-            "construction cost": 600.0,
             "latitude": 40.816453,
             "name": "Aguiar da Beira",
             "position": 262,
@@ -2366,15 +2213,6 @@
             "population": 5465,
             "percTotal": 0.052,
             "longitude": -8.4880572
-        },
-        {
-            "construction cost": 705.0,
-            "latitude": 38.6839843,
-            "name": "Velas",
-            "position": 264,
-            "population": 5398,
-            "percTotal": 0.051,
-            "longitude": -28.2131879
         },
         {
             "construction cost": 600.0,
@@ -2449,15 +2287,6 @@
             "longitude": -8.1653387
         },
         {
-            "construction cost": 705.0,
-            "latitude": 37.8322686,
-            "name": "Nordeste",
-            "position": 273,
-            "population": 4937,
-            "percTotal": 0.047,
-            "longitude": -25.145931
-        },
-        {
             "construction cost": 687.0,
             "latitude": 38.1658087,
             "name": "Cuba",
@@ -2465,15 +2294,6 @@
             "population": 4878,
             "percTotal": 0.046,
             "longitude": -7.8913548
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 38.39976770000001,
-            "name": "Lajes do Pico",
-            "position": 275,
-            "population": 4711,
-            "percTotal": 0.045,
-            "longitude": -28.2519641
         },
         {
             "construction cost": 600.0,
@@ -2510,15 +2330,6 @@
             "population": 4433,
             "percTotal": 0.042,
             "longitude": -7.889922799999999
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 39.0862753,
-            "name": "Santa Cruz da Graciosa",
-            "position": 280,
-            "population": 4391,
-            "percTotal": 0.042,
-            "longitude": -28.0156811
         },
         {
             "construction cost": 600.0,
@@ -2573,15 +2384,6 @@
             "population": 3780,
             "percTotal": 0.036,
             "longitude": -6.8087993
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 32.7379818,
-            "name": "Calheta (R.A.A.)",
-            "position": 287,
-            "population": 3773,
-            "percTotal": 0.036,
-            "longitude": -17.180948
         },
         {
             "construction cost": 600.0,
@@ -2657,15 +2459,6 @@
         },
         {
             "construction cost": 600.0,
-            "latitude": 38.5160544,
-            "name": "São Roque do Pico",
-            "position": 296,
-            "population": 3388,
-            "percTotal": 0.032,
-            "longitude": -28.3140488
-        },
-        {
-            "construction cost": 600.0,
             "latitude": 39.0528283,
             "name": "Monforte",
             "position": 297,
@@ -2711,15 +2504,6 @@
         },
         {
             "construction cost": 600.0,
-            "latitude": 32.8666844,
-            "name": "Porto Moniz",
-            "position": 302,
-            "population": 2711,
-            "percTotal": 0.026,
-            "longitude": -17.1706079
-        },
-        {
-            "construction cost": 600.0,
             "latitude": 38.3824046,
             "name": "Mourão",
             "position": 303,
@@ -2738,39 +2522,12 @@
         },
         {
             "construction cost": 600.0,
-            "latitude": 39.4582827,
-            "name": "Santa Cruz das Flores",
-            "position": 305,
-            "population": 2289,
-            "percTotal": 0.022,
-            "longitude": -31.1338071
-        },
-        {
-            "construction cost": 600.0,
             "latitude": 38.1328809,
             "name": "Barrancos",
             "position": 306,
             "population": 1834,
             "percTotal": 0.017,
             "longitude": -6.977312599999999
-        },
-        {
-            "construction cost": 600.0,
-            "latitude": 39.3782624,
-            "name": "Lajes das Flores",
-            "position": 307,
-            "population": 1504,
-            "percTotal": 0.014,
-            "longitude": -31.1781975
-        },
-        {
-            "construction cost": 645.0,
-            "latitude": 39.7023111,
-            "name": "Corvo",
-            "position": 308,
-            "population": 430,
-            "percTotal": 0.004,
-            "longitude": -31.1080244
         }
     ]
 }
