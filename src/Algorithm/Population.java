@@ -1,5 +1,6 @@
 package algorithm;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -99,4 +100,11 @@ public class Population {
         return newIndiv;
     }
 
+    @Override
+    public String toString() {
+        return "Population{" +
+                "totalFitness=" + totalFitness +
+                ", best individual=" + this.findBestIndividual() +
+                '}';
+    }
 }
