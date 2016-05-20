@@ -1,4 +1,4 @@
-package Algorithm;
+package algorithm;
 
 public class SimAnnealing {
 

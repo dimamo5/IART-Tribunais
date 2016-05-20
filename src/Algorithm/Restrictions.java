@@ -1,4 +1,4 @@
-package Algorithm;
+package algorithm;
 
 /**
  * Created by diogo on 12/03/2016.
