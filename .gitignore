@@ -1,8 +1,12 @@
+./.idea/
+*.xml
+*.iml
+./out/
+*.js
+
+### Java template
 *.class
 .idea
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
 # Package Files #
 *.jar
