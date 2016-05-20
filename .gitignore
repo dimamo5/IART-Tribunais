@@ -1,7 +1,7 @@
-./.idea/
+/idea
 *.xml
 *.iml
-./out/
+/out
 *.js
 
 ### Java template

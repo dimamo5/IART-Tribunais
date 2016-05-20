@@ -2,7 +2,6 @@ package algorithm;
 
 import java.util.Random;
 
-
 /**
  * Created by diogo on 20/05/2016.
  */

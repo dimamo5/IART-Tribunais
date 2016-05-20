@@ -2,7 +2,7 @@
  * Created by diogo on 10/03/2016.
  */
 
-package Algorithm;
+package algorithm;
 
 import data.Database;
 
