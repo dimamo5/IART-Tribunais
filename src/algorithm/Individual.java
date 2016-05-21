@@ -63,6 +63,16 @@ public class Individual {
             this.setGene(i, rand.nextBoolean());
         }
     }
+    public int countGenePositive(){
+        int count=0;
+        for ( int i=0;i< genes.length();i++){
+            if(genes.get(i)){
+                count++;
+            }
+        }
+        return  count;
+    }
+
 
     public void mutate() {
         Random rand = new Random();
