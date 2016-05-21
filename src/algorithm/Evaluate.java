@@ -15,7 +15,7 @@ public class Evaluate implements Runnable {
     private Database db = Database.getInstance();
     private Individual individual;
 
-
+    // TODO: 21/05/2016 Ver se é necessario tribunais maximos
     public Evaluate(Individual ind) {
         this.individual = ind;
     }
@@ -25,10 +25,14 @@ public class Evaluate implements Runnable {
         for (int i = 0; i < Individual.SIZE; i++) {
             if (individual.getGene(i)) {
                 individual.addFitness((int) (db.getCounty(i).getPopulation() * CONST_ACCESS_TRIBUNAL - db.getCounty(i).getConstrution_cost() * CONST_CONSTRUCT_TRIBUNAL));
-            }else if(individual.getGene(i) && getMin(i)){
-                //TODO preencher os outros dois casos
             }else{
-
+                int posMin= getMin(i);
+                long distMin = db.getDistMatrix()[i][posMin];
+                if(individual.getGene(i) && distMin<MAX_DIST){
+                    individual.addFitness((int) (db.getCounty(i).getPopulation() * CONST_ACCESS_TRIBUNAL*((MAX_DIST-distMin)/MAX_DIST)));
+                }else{
+                    individual.addFitness((int) -db.getCounty(i).getPopulation()*CONST_ACCESS_TRIBUNAL);
+                }
             }
         }
     }
@@ -38,7 +42,7 @@ public class Evaluate implements Runnable {
         long min = Long.MAX_VALUE;
         int pos=0;
         for ( int i =0; i< row.length;i++){
-            if(min> row[i] && row[i]>=7){   //GPS Coord has a tolerance of 7 meters
+            if(min> row[i] && row[i]>=7 && individual.getGene(i)){   //GPS Coord has a tolerance of 7 meters
                 min= row[i];
                 pos=i;
             }
