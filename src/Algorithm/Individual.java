@@ -70,6 +70,16 @@ public class Individual {
         this.genes.set(index, !this.genes.get(index));    // flip
     }
 
+    public int countGenePositive(){
+        int count=0;
+        for ( int i=0;i< genes.length();i++){
+            if(genes.get(i)){
+                count++;
+            }
+        }
+        return  count;
+    }
+
     public int evaluate() {
         int fitness = 0;
         int count = 0;
