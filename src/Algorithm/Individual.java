@@ -7,32 +7,37 @@ package algorithm;
 import data.Database;
 
 import java.util.Arrays;
+import java.util.BitSet;
 import java.util.Random;
 
 public class Individual {
 
     public static int SIZE;
-    private int[] genes;
+    private BitSet genes;
     private int fitness;
 
     private Database counties = Database.getInstance();
 
     public Individual() {
         SIZE = counties.getSize();
-        this.genes = new int[SIZE];
-
+        this.genes = new BitSet(SIZE);
+        this.fitness = 0;
     }
 
     public Individual(Individual ind) {
-        this.genes = Arrays.copyOf(ind.getGenes(), ind.getGenes().length);
+        this.genes = (BitSet) ind.getGenes().clone();
         this.fitness = ind.getFitnessValue();
+    }
+
+    public void addFitness(int fit) {
+        fitness += fit;
     }
 
     @Override
     public String toString() {
         return "Individual{" +
                 "fitness=" + fitness +
-                ", genes=" + Arrays.toString(genes) +
+                ", genes=" + genes.toString() +
                 '}';
     }
 
@@ -40,38 +45,38 @@ public class Individual {
         return fitness;
     }
 
-    public int getGene(int index) {
-        return genes[index];
+    public boolean getGene(int index) {
+        return genes.get(index);
     }
 
-    public int[] getGenes() {
+    public BitSet getGenes() {
         return genes;
     }
 
-    public void setGene(int index, int gene) {
-        this.genes[index] = gene;
+    public void setGene(int index, boolean gene) {
+        this.genes.set(index,gene);
     }
 
     public void randGenes() {
         Random rand = new Random();
         for (int i = 0; i < SIZE; ++i) {
-            this.setGene(i, rand.nextInt(2));
+            this.setGene(i, rand.nextBoolean());
         }
     }
 
     public void mutate() {
         Random rand = new Random();
         int index = rand.nextInt(SIZE);
-        this.setGene(index, 1 - this.getGene(index));    // flip
+        this.genes.set(index, !this.genes.get(index));    // flip
     }
 
     public int evaluate() {
         int fitness = 0;
         int count = 0;
-        for (int i = 0; i < SIZE; ++i) {
+        /*for (int i = 0; i < SIZE; ++i) {
             if (this.genes[i] == 1)
                 fitness += this.counties.getCounty(i).getPopulation();
-        }
+        }*/
 
         this.fitness = fitness;
 
