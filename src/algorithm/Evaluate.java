@@ -12,6 +12,7 @@ public class Evaluate implements Runnable {
     private static int CONST_ACCESS_TRIBUNAL = 4;
     private static int CONST_CONSTRUCT_TRIBUNAL = 10;
     private static int MAX_DIST=50000; //50000m em linha recta de distancia maxima
+    private static int MAX_NO_TRIBUNAL=50;
     private Database db = Database.getInstance();
     private Individual individual;
 
@@ -23,6 +24,9 @@ public class Evaluate implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < Individual.SIZE; i++) {
+            if(individual.countGenePositive()>MAX_NO_TRIBUNAL){
+                this.individual.addFitness(Integer.MIN_VALUE);
+            }
             if (individual.getGene(i)) {
                 individual.addFitness((int) (db.getCounty(i).getPopulation() * CONST_ACCESS_TRIBUNAL - db.getCounty(i).getConstrution_cost() * CONST_CONSTRUCT_TRIBUNAL));
             }else{
