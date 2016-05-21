@@ -8,23 +8,6 @@ public class County {
     private int position;
     private String name;
     private int population;
-
-    public int getPosition() {
-        return position;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getPopulation() {
-        return population;
-    }
-
-    public double getPercTotal() {
-        return percTotal;
-    }
-
     private double percTotal;
     private double latitude;
     private double longitude;
@@ -67,11 +50,36 @@ public class County {
         return obj;
     }
 
+
+    public int getPosition() {
+        return position;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
+    public double getPercTotal() {
+        return percTotal;
+    }
+
     public double getConstrution_cost() {
         return constrution_cost;
     }
 
     public void setConstrution_cost(double constrution_cost) {
         this.constrution_cost = constrution_cost;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
     }
 }

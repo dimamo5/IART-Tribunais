@@ -104,7 +104,7 @@ public class Population {
     public String toString() {
         return "Population{" +
                 "totalFitness=" + totalFitness +
-                ", best individual=" + this.findBestIndividual() +
+                this.findBestIndividual() +
                 '}';
     }
 }
