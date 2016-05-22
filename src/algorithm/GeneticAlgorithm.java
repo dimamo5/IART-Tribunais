@@ -10,7 +10,6 @@ public class GeneticAlgorithm {
     public final static double MUTATION_RATE = 0.1;     // probability of mutation
     public final static double CROSSOVER_RATE = 0.75;     // probability of crossover
 
-
     private Population pop = new Population();
     private Individual[] newPop = new Individual[Population.POP_SIZE];
     private Individual[] indiv = new Individual[2];

@@ -103,7 +103,7 @@ public class Individual {
 
     /**
      * Calculates the fitness value of the individual
-     * NOTE: Avoid using this since!
+     * NOTE: Avoid using this since evalute implements Threads and function better with them!
      * @return
      */
     public int evaluate() {
@@ -114,10 +114,10 @@ public class Individual {
     public static void main(String[] args){
         Individual ind = new Individual("11100010001001100110110101100001000111000111010100101000101001001000101110101000110111011010010001100110001100100101110001011010110100110000110110011110100101100011100011101010100000001001001001010110100110100010011100100001111100100001011001000011001111001001111101011001100011011");
         ind.evaluate();
-        System.out.println("Ind1: "+ind);
+        System.out.println("Count: " +ind.countGenePositive() +"Ind1: "+ind);
 
         Individual ind1 = new Individual("01100010011001000110110101100001000111000111010100101000101001001000101110101000110111011010010001100110001100100101110001011010110100110000110110011110100101100011100011101010100000001001001001010110100110100010011100100001111100100001011001000011001111001001111101011001100011011");
         ind1.evaluate();
-        System.out.println("Ind1: "+ind1);
+        System.out.println("Count: " +ind1.countGenePositive() +"Ind1: "+ind1);
     }
 }
