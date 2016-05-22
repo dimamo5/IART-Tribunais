@@ -35,7 +35,7 @@ public class Evaluate implements Runnable {
                 if(individual.getGene(i) && distMin<MAX_DIST){
                     individual.addFitness((int) (db.getCounty(i).getPopulation() * CONST_ACCESS_TRIBUNAL*((MAX_DIST-distMin)/MAX_DIST)));
                 }else{
-                    individual.addFitness((int) -db.getCounty(i).getPopulation()*CONST_ACCESS_TRIBUNAL);
+                    individual.addFitness( -db.getCounty(i).getPopulation()*CONST_ACCESS_TRIBUNAL);
                 }
             }
         }

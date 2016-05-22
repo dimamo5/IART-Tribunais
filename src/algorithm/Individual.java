@@ -24,6 +24,15 @@ public class Individual {
         this.fitness = 0;
     }
 
+    public Individual(Boolean[] genes){
+        SIZE=genes.length;
+        this.genes=new BitSet(SIZE);
+        this.fitness=0;
+        for (int i = 0; i < genes.length; ++i) {
+            this.setGene(i, genes[i]);
+        }
+    }
+
     public Individual(Individual ind) {
         this.genes = (BitSet) ind.getGenes().clone();
         this.fitness = ind.getFitnessValue();
@@ -35,9 +44,17 @@ public class Individual {
 
     @Override
     public String toString() {
+        String s="";
+        for(int i =0;i< genes.length();i++){
+            if(genes.get(i)){
+                s+="1";
+            }else{
+                s+="0";
+            }
+        }
         return "Individual{" +
                 "fitness=" + fitness +
-                ", genes=" + genes.toString() +
+                ", genes=" + s +
                 '}';
     }
 
@@ -80,19 +97,19 @@ public class Individual {
         this.genes.set(index, !this.genes.get(index));    // flip
     }
 
-
+    /**
+     * Calculates the fitness value of the individual
+     * NOTE: Avoid using this since!
+     * @return
+     */
     public int evaluate() {
-        int fitness = 0;
-        int count = 0;
-        /*for (int i = 0; i < SIZE; ++i) {
-            if (this.genes[i] == 1)
-                fitness += this.counties.getCounty(i).getPopulation();
-        }*/
-
-        this.fitness = fitness;
-
+       new Evaluate(this).run();
         return fitness;
     }
 
-
+    public static void main(String[] args){
+        Individual ind = new Individual();
+        ind.randGenes();
+        System.out.println("Ind: "+ind);
+    }
 }
