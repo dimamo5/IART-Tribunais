@@ -6,7 +6,7 @@ import java.util.Random;
  * Created by diogo on 20/05/2016.
  */
 public class GeneticAlgorithm {
-    public final static int MAX_ITER = 100;             // max number of iterations
+    public final static int MAX_ITER = 10000;             // max number of iterations
     public final static double MUTATION_RATE = 0.1;     // probability of mutation
     public final static double CROSSOVER_RATE = 0.75;     // probability of crossover
 

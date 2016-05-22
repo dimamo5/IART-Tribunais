@@ -24,12 +24,16 @@ public class Individual {
         this.fitness = 0;
     }
 
-    public Individual(Boolean[] genes){
-        SIZE=genes.length;
+    public Individual(String genes){
+        SIZE=genes.length();
         this.genes=new BitSet(SIZE);
         this.fitness=0;
-        for (int i = 0; i < genes.length; ++i) {
-            this.setGene(i, genes[i]);
+        for (int i = 0; i < genes.length(); ++i) {
+            if(genes.charAt(i)=='0'){
+                this.setGene(i,false);
+            }else{
+                this.setGene(i,true);
+            }
         }
     }
 
@@ -108,8 +112,12 @@ public class Individual {
     }
 
     public static void main(String[] args){
-        Individual ind = new Individual();
-        ind.randGenes();
-        System.out.println("Ind: "+ind);
+        Individual ind = new Individual("11100010001001100110110101100001000111000111010100101000101001001000101110101000110111011010010001100110001100100101110001011010110100110000110110011110100101100011100011101010100000001001001001010110100110100010011100100001111100100001011001000011001111001001111101011001100011011");
+        ind.evaluate();
+        System.out.println("Ind1: "+ind);
+
+        Individual ind1 = new Individual("01100010011001000110110101100001000111000111010100101000101001001000101110101000110111011010010001100110001100100101110001011010110100110000110110011110100101100011100011101010100000001001001001010110100110100010011100100001111100100001011001000011001111001001111101011001100011011");
+        ind1.evaluate();
+        System.out.println("Ind1: "+ind1);
     }
 }
