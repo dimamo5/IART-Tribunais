@@ -15,10 +15,10 @@ import java.io.IOException;
  */
 public class MapPanel extends JPanel{
     private BufferedImage map,court;
-    private static final double LEFT_SIZE= -9.500542;
-    private static final double TOP_SIZE=42.154205;
-    private static final double BOTTOM_SIZE=36.993611;
-    private static final double RIGHT_SIZE=-6.190207;
+    private static final double LEFT_SIZE = -9.550542;
+    private static final double TOP_SIZE = 42.114205;
+    private static final double BOTTOM_SIZE = 36.923611;
+    private static final double RIGHT_SIZE = -6.180207;
     private static double PIXEL_PER_COORD_HOR;
     private static double PIXEL_PER_COORD_VER;
 
@@ -57,13 +57,13 @@ public class MapPanel extends JPanel{
         g.drawImage(court,0,0,court.getWidth(),court.getHeight(),this);
         double posX,posY;
         for(int i = 0; i< Individual.SIZE; i++){
-            if(ind.getGene(i)) {
+            //if(ind.getGene(i)) {
                 posX = (Database.getInstance().getCounty(i).getLongitude() - LEFT_SIZE) * PIXEL_PER_COORD_HOR;
                 posY = (TOP_SIZE - Database.getInstance().getCounty(i).getLatitude()) * PIXEL_PER_COORD_VER;
                 //g.drawImage(court,(int)posX,(int)posY,court.getWidth(),court.getHeight(),this);
                 g.drawOval((int) posX, (int) posY, 5, 5);
                 System.out.println("Court-> hor: " + posX + " ver: " + posY);
-            }
+            //}
         }
 
     }
