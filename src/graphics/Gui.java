@@ -16,7 +16,7 @@ public class Gui extends JFrame {
         super();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        setSize(500,900);
+        setSize(550, 1000);
         setVisible(true);
         getContentPane().add(map, BorderLayout.CENTER);
 

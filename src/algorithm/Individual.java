@@ -6,6 +6,7 @@ package algorithm;
 
 import data.Database;
 
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.BitSet;
 import java.util.Random;
@@ -57,7 +58,7 @@ public class Individual {
             }
         }
         return "Individual{" +
-                "fitness=" + fitness +
+                "fitness=" + String.format("%15s", NumberFormat.getNumberInstance().format(fitness)) +
                 ", genes=" + s +
                 '}';
     }
