@@ -51,6 +51,7 @@ public class Population {
         for (idx = 0; idx < POP_SIZE && randNum > 0; ++idx) {
             randNum -= m_population[idx].getFitnessValue();
         }
+        //System.out.println("roullete"+m_population[idx - 1].getGenes().length());
         return m_population[idx - 1];
     }
 
@@ -80,10 +81,11 @@ public class Population {
         return m_population[idxMax];        // maximization
     }
 
-    public static Individual[] crossover(Individual indiv1, Individual indiv2) {
+    public Individual[] crossover(Individual indiv1, Individual indiv2) {
         Individual[] newIndiv = new Individual[2];
         newIndiv[0] = new Individual();
         newIndiv[1] = new Individual();
+
 
         int randPoint = m_rand.nextInt(Individual.SIZE);
         int i;
@@ -102,8 +104,7 @@ public class Population {
     @Override
     public String toString() {
         return "Population{" +
-                "totalFitness=" + totalFitness +
-                this.findBestIndividual() +
+                "bestIndividual=" + this.findBestIndividual() +
                 '}';
     }
 }

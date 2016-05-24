@@ -13,20 +13,20 @@ import java.util.Random;
 public class Individual {
 
     public static int SIZE;
-    private BitSet genes;
+    private boolean[] genes;
     private int fitness;
 
     private Database counties = Database.getInstance();
 
     public Individual() {
         SIZE = counties.getSize();
-        this.genes = new BitSet(SIZE);
+        this.genes = new boolean[SIZE];
         this.fitness = 0;
     }
 
     public Individual(String genes){
         SIZE=genes.length();
-        this.genes=new BitSet(SIZE);
+        this.genes = new boolean[SIZE];
         this.fitness=0;
         for (int i = 0; i < genes.length(); ++i) {
             if(genes.charAt(i)=='0'){
@@ -38,7 +38,7 @@ public class Individual {
     }
 
     public Individual(Individual ind) {
-        this.genes = (BitSet) ind.getGenes().clone();
+        System.arraycopy(this.genes, 0, ind.getGenes(), 0, ind.getGenes().length);
         this.fitness = ind.getFitnessValue();
     }
 
@@ -54,15 +54,15 @@ public class Individual {
     @Override
     public String toString() {
         String s="";
-        for(int i =0;i< genes.length();i++){
-            if(genes.get(i)){
+        for (int i = 0; i < genes.length; i++) {
+            if (genes[i]) {
                 s+="1";
             }else{
                 s+="0";
             }
         }
-        return "Individual{" +
-                "fitness=" + String.format("%15s", NumberFormat.getNumberInstance().format(fitness)) +
+        return "Individual{" + "Count: " + this.countGenePositive() +
+                " ,fitness=" + String.format("%12s", NumberFormat.getNumberInstance().format(fitness)) +
                 ", genes=" + s +
                 '}';
     }
@@ -72,27 +72,27 @@ public class Individual {
     }
 
     public boolean getGene(int index) {
-        return genes.get(index);
+        return genes[index];
     }
 
-    public BitSet getGenes() {
+    public boolean[] getGenes() {
         return genes;
     }
 
     public void setGene(int index, boolean gene) {
-        this.genes.set(index,gene);
+        this.genes[index] = gene;
     }
 
     public void randGenes() {
         Random rand = new Random();
-        for (int i = 0; i < SIZE; ++i) {
+        for (int i = 0; i < SIZE; i++) {
             this.setGene(i, rand.nextBoolean());
         }
     }
     public int countGenePositive(){
         int count=0;
-        for ( int i=0;i< genes.length();i++){
-            if(genes.get(i)){
+        for (int i = 0; i < genes.length; i++) {
+            if (getGene(i)) {
                 count++;
             }
         }
@@ -103,7 +103,7 @@ public class Individual {
     public void mutate() {
         Random rand = new Random();
         int index = rand.nextInt(SIZE);
-        this.genes.set(index, !this.genes.get(index));    // flip
+        this.genes[index] = !this.genes[index];
     }
 
     /**
@@ -114,16 +114,6 @@ public class Individual {
     public double evaluate() {
        new Evaluate(this).run();
         return fitness;
-    }
-
-    public static void main(String[] args){
-        Individual ind = new Individual("11100010001001100110110101100001000111000111010100101000101001001000101110101000110111011010010001100110001100100101110001011010110100110000110110011110100101100011100011101010100000001001001001010110100110100010011100100001111100100001011001000011001111001001111101011001100011011");
-        ind.evaluate();
-        System.out.println("Count: " +ind.countGenePositive() +"Ind1: "+ind);
-
-        Individual ind1 = new Individual("01100010011001000110110101100001000111000111010100101000101001001000101110101000110111011010010001100110001100100101110001011010110100110000110110011110100101100011100011101010100000001001001001010110100110100010011100100001111100100001011001000011001111001001111101011001100011011");
-        ind1.evaluate();
-        System.out.println("Count: " +ind1.countGenePositive() +"Ind1: "+ind1);
     }
 
 
