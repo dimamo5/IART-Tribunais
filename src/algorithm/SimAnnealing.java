@@ -1,10 +1,13 @@
 package algorithm;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.io.*;
 import java.text.NumberFormat;
 import java.util.Locale;
 
 import static java.lang.Math.exp;
+
 
 public class SimAnnealing {
 
@@ -12,7 +15,7 @@ public class SimAnnealing {
     private double STOP_CONDITION = 0.01;
 
     private Individual individual;
-    private double coolingRate = 0.01;
+    private double coolingRate = 0.001;
 
     public void setCoolingRate(double coolingRate) {
         this.coolingRate = coolingRate;
@@ -37,82 +40,93 @@ public class SimAnnealing {
     }
 
     public void run() throws IOException {
-        double temp = STARTING_TEMP;
+        double temperature = STARTING_TEMP;
 
-        int best = 0;
-        FileWriter file = new FileWriter("test.txt",true);
-        //file.write("Teste\n\n");
+        //FileWriter file = new FileWriter("test.txt",true);
 
-        double stop_cond =  STARTING_TEMP*STOP_CONDITION;
+        double stop_cond = STARTING_TEMP * STOP_CONDITION;
 
-        int total=0, bad = 0;
 
-        while (temp > stop_cond) {
-            total++;
-            for(int i = 0; i < 140; i++) {
+        int total = 0, bad = 0, best = 0, good = 0, fitness_diff = 0, total_changes = 0,genes_iguais=0,changes=0;
 
-                double f = this.individual.evaluate();
-                Individual ind = new Individual(this.individual);
-                ind.mutate();
-                double newF = ind.evaluate();
-                if (acceptanceProbability(f, newF, temp) > Math.random()) {
-                    bad++;
-                    this.individual = ind;
+        double f, newF;
+
+        while (temperature > stop_cond) {
+            for (int i = 0; i < 140; i++) {
+                Individual newInd = new Individual(this.individual);  //novo individuo
+                newInd.mutate();
+
+                newF = newInd.evaluate(); //newInd Rating
+                f = this.individual.evaluate(); //actualInd Rating
+
+                if(!this.individual.getGenes().equals(newInd.getGenes())) {
+                    if (this.individual.getFitnessValue() != newInd.getFitnessValue())
+                        fitness_diff++;
+                }else
+                    genes_iguais++;
+
+                total++;
+                if (acceptanceProbability(f, newF, temperature)) {
+                    if(!this.individual.getGenes().equals(newInd.getGenes())
+                            && this.individual.getFitnessValue() != newInd.getFitnessValue()){
+                        changes++;
+                        this.individual = newInd;
+                    }
+
+                    if(!this.individual.getGenes().equals(newInd.getGenes())
+                            && this.individual.getFitnessValue() != newInd.getFitnessValue()
+                            && this.individual.getFitnessValue() > newInd.getFitnessValue())
+                        bad++;
+
+                    //total_changes++;
                 }
-                /* testing related */
-                if (this.individual.getFitnessValue() > best)
+
+                if (this.individual.getFitnessValue() > best)   /* testing related */
                     best = this.individual.getFitnessValue();
             }
-            // Cool system
-            temp *= 1 - coolingRate;
+
+            temperature *= 1 - coolingRate; // Cool system
         }
 
-        System.out.println("Total:"+ total+" " + "bad:" + bad );
 
-        String s = String.format("%15s\n",NumberFormat.getNumberInstance(Locale.GERMANY).format(best));
-        String s2 = String.format("%15s\n",NumberFormat.getNumberInstance(Locale.GERMANY).format(this.individual.getFitnessValue()));
+        System.out.println("\nGenes Iguais: " + genes_iguais
+                +"\nFitness Diferente: " + fitness_diff
+                +"\nTroca p/ Individuo != actual: " + changes
+                +"\nDowngrade(descida na colina):" + bad
+              //  +"\nTotal trocas: " + total_changes
+                + "\nTotal Iterações: " + total );
 
-        file.write(s);
-        file.write(s2);
-        file.write("\n\n");
-        file.flush();
-        file.close();
-
+        String s = String.format("\n%15s\n", NumberFormat.getNumberInstance(Locale.GERMANY).format(best));
+        String s2 = String.format("%15s\n", NumberFormat.getNumberInstance(Locale.GERMANY).format(this.individual.getFitnessValue()));
         System.out.printf(s);
-        System.out.printf(s2);
+        System.out.printf(s2 + "\n");
     }
+
 
     // TODO: 22/05/2016 Possible optimization: Keep the best individual saved, at the end compare the final result and return to the best state if it's better than the achieved one
     //maximum possible retries(go back to the best state and startover) to be defined
 
-
-
     // Calculate the acceptance probability
-    public static double acceptanceProbability(double energy, double newEnergy, double temperature) {
-        // If the new solution is better (>), accept it
-        if (newEnergy > energy) {
-            return 1.0;
-        } else {  // If the new solution is worse, calculate an acceptance probability
-            /* Energy = valor retornado da funçao de fitness
-            A probabilidade de aceitar vai ser tanto maior quanto menor a diferença entre newEnergy e ActualEnergy
-            ou seja, ex: A: NewEnergy=10, Energy=11  , B: NewEnergy= 2 , Energy=11
-            acceptanceProbability(A) > acceptanceProbability(B)   */
+    public static boolean acceptanceProbability(double E, double newE, double temperature) {
+        double delta_E = newE - E;
 
-            return exp((newEnergy - energy) / temperature);
-        }
+        if(delta_E < 0)
+            System.out.println("e^("+delta_E+"/"+temperature+") = " + exp(delta_E / temperature) );
+
+        return delta_E >= 0 || exp(delta_E / temperature) > Math.random();
     }
+
+
 
     public static void main(String[] args) throws IOException {
 
-        System.out.println("===============TESTE 0.001================\n\n");
-
-       for(int i = 0; i < 1 ; i++) {
+        for (int i = 0; i < 1; i++) {
             SimAnnealing sm1 = new SimAnnealing();
-            sm1.setSTOP_CONDITION(0.1);
-           // sm1.setSTARTING_TEMP(100*exp(i));
-           // sm1.setCoolingRate(0.01);
+            sm1.setSTOP_CONDITION(0.01);
+            // sm1.setSTARTING_TEMP(100*exp(i));
+            // sm1.setCoolingRate(0.01);
             sm1.run();
-       }
+        }
     }
 
 
