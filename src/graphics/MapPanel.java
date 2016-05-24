@@ -25,8 +25,8 @@ public class MapPanel extends JPanel{
     private Individual ind;
 
     public MapPanel(){
-        ind=new Individual();
-        ind.randGenes();
+        ind = new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+        //ind.randGenes();
         try {
             map = ImageIO.read(new File(System.getProperty("user.dir") + "/resources/img/map.png"));
             PIXEL_PER_COORD_HOR=map.getWidth()/(RIGHT_SIZE-LEFT_SIZE);
