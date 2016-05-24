@@ -9,8 +9,8 @@ import java.util.Arrays;
  * Created by diogo on 12/03/2016.
  */
 public class Evaluate implements Runnable {
-    private static int CONST_ACCESS_TRIBUNAL = 5;
-    private static int CONST_CONSTRUCT_TRIBUNAL = 5;
+    private static int CONST_ACCESS_TRIBUNAL = 2;
+    private static int CONST_CONSTRUCT_TRIBUNAL = 1;
     private static int MAX_DIST=50000; //50000m em linha recta de distancia maxima
     private static int MAX_NO_TRIBUNAL=150;
     private Database db = Database.getInstance();
@@ -19,6 +19,7 @@ public class Evaluate implements Runnable {
     // TODO: 21/05/2016 Ver se é necessario tribunais maximos
     public Evaluate(Individual ind) {
         this.individual = ind;
+        this.individual.resetFitness();
     }
 
     @Override

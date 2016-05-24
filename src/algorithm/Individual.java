@@ -6,7 +6,7 @@ package algorithm;
 
 import data.Database;
 
-import java.util.Arrays;
+import java.text.NumberFormat;
 import java.util.BitSet;
 import java.util.Random;
 
@@ -43,7 +43,12 @@ public class Individual {
     }
 
     public void addFitness(int fit) {
-        fitness += fit;
+        if (fitness + fit > 0)
+            fitness += fit;
+    }
+
+    public void resetFitness() {
+        this.fitness = 0;
     }
 
     @Override
@@ -57,7 +62,7 @@ public class Individual {
             }
         }
         return "Individual{" +
-                "fitness=" + fitness +
+                "fitness=" + String.format("%15s", NumberFormat.getNumberInstance().format(fitness)) +
                 ", genes=" + s +
                 '}';
     }
@@ -106,7 +111,7 @@ public class Individual {
      * NOTE: Avoid using this since evalute implements Threads and function better with them!
      * @return
      */
-    public int evaluate() {
+    public double evaluate() {
        new Evaluate(this).run();
         return fitness;
     }
@@ -120,4 +125,6 @@ public class Individual {
         ind1.evaluate();
         System.out.println("Count: " +ind1.countGenePositive() +"Ind1: "+ind1);
     }
+
+
 }
