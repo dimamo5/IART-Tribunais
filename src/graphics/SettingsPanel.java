@@ -43,9 +43,6 @@ public class SettingsPanel extends JPanel {
                 SimAnnealing.coolingRate = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(21)).getText());
                 SimAnnealing.STOP_CONDITION = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(23)).getText());
 
-                System.out.println(GeneticAlgorithm.MAX_ITER + " " + GeneticAlgorithm.CROSSOVER_RATE + " " + GeneticAlgorithm.MUTATION_RATE + " " +
-                        SimAnnealing.coolingRate + " " + SimAnnealing.STOP_CONDITION);
-
                 JPanel algorithmPanel = ((JPanel) SettingsPanel.this.getComponent(11));
 
                 if (((JRadioButton) algorithmPanel.getComponent(0)).isSelected()) {

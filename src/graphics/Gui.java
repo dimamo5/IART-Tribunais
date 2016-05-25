@@ -27,6 +27,7 @@ public class Gui extends JFrame {
         getContentPane().add(map, BorderLayout.CENTER);
         getContentPane().add(settings, BorderLayout.EAST);
         pack();
+        setResizable(false);
 
     }
 

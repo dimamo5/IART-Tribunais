@@ -169,5 +169,5 @@ public class SimAnnealing {
         sm1.run();
         //}
     }
-    // TODO: 25/05/2016 @sergio faz  
+    // TODO: 25/05/2016 @sergio faz a optimização
 }

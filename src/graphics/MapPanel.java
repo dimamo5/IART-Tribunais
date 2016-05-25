@@ -92,20 +92,22 @@ public class MapPanel extends JPanel{
             }
         }
     }
-    // TODO: 25/05/2016 Fazer para o encadeado
+
     public void startSA(SimAnnealing sa) {
         while (sa.temperature > sa.stop_cond) {
             sa.runIte();
             ind = sa.getBestInd();
             this.paintImmediately(0, 0, this.getWidth(), this.getHeight());
         }
+        System.out.println(sa.getBestInd());
     }
 
     public void startGASA() {
         GeneticAlgorithm ga = new GeneticAlgorithm();
         startGA(ga);
+        System.out.println("GA: " + ga.getBestIndiv());
         SimAnnealing sa = new SimAnnealing(ga.getBestIndiv());
         startSA(sa);
-
+        System.out.println("SA: " + sa.getBestInd());
     }
 }
