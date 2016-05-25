@@ -11,7 +11,7 @@ public class SimAnnealing {
     public static double STOP_CONDITION = 0.01;
     public double temperature;
     private Individual individual;
-    public static double coolingRate = 0.001;
+    public static double coolingRate = 0.01;
     public double stop_cond;
 
     public void setCoolingRate(double coolingRate) {
@@ -23,8 +23,9 @@ public class SimAnnealing {
     }
 
     public SimAnnealing(Individual ind) {
-        this.individual = ind;
+        this.individual = new Individual(ind);
         this.temperature = STARTING_TEMP;
+        this.stop_cond = STARTING_TEMP * STOP_CONDITION;
     }
 
     public SimAnnealing() {
@@ -162,12 +163,11 @@ public class SimAnnealing {
 
     public static void main(String[] args) throws IOException {
 
-        for (int i = 0; i < 10; i++) {
-            SimAnnealing sm1 = new SimAnnealing();
-            sm1.setSTOP_CONDITION(0.01);
-            // sm1.setSTARTING_TEMP(100*exp(i));
-            // sm1.setCoolingRate(0.01);
-            sm1.run();
-        }
+        // (int i = 0; i < 10; i++) {
+        SimAnnealing sm1 = new SimAnnealing(new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111011111111101111111010111111011111011110101100111110111000100000101000001001100001000000000000000000100000000000000000100000000000000000000000000000000000000000000000000000000000000000"));
+        SimAnnealing sm = new SimAnnealing();
+        sm1.run();
+        //}
     }
+    // TODO: 25/05/2016 @sergio faz  
 }

@@ -62,8 +62,7 @@ public class Individual {
                 s += "0";
             }
         }
-        return "Individual{" + "Count: " + this.countGenePositive() +
-                " ,fitness=" + String.format("%12s", NumberFormat.getNumberInstance().format(fitness)) +
+        return "Individual{" + "fitness=" + String.format("%10s", NumberFormat.getNumberInstance().format(fitness)) +
                 ", genes=" + s +
                 '}';
     }

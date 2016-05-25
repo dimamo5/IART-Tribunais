@@ -114,10 +114,10 @@ public class GeneticAlgorithm {
 
             // reevaluate current population
             pop.evaluate();
-            System.out.println(pop.toString());
         }
 
         // best indiv
         this.bestIndiv = pop.findBestIndividual();
+        System.out.println(this.bestIndiv);
     }
 }
