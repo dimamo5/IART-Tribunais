@@ -33,7 +33,7 @@ public class Gui extends JFrame {
 
 
     public static void main(String[] args) {
-        Gui g = new Gui();
+        new Gui();
 
     }
 

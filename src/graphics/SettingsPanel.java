@@ -2,6 +2,7 @@ package graphics;
 
 import algorithm.Evaluate;
 import algorithm.GeneticAlgorithm;
+import algorithm.Population;
 import algorithm.SimAnnealing;
 import data.Database;
 
@@ -15,8 +16,8 @@ import java.awt.event.ActionListener;
  * Created by diogo on 25/05/2016.
  */
 public class SettingsPanel extends JPanel {
-    public final int COUNTY_SIZE = Database.getInstance().getSize();
     public final static int MIN_COUNTY_SIZE = 20;
+    public final int COUNTY_SIZE = Database.getInstance().getSize();
     GridBagConstraints c = new GridBagConstraints();
 
     public SettingsPanel() {
@@ -39,9 +40,11 @@ public class SettingsPanel extends JPanel {
                 GeneticAlgorithm.MAX_ITER = Integer.valueOf(((JTextField) SettingsPanel.this.getComponent(14)).getText());
                 GeneticAlgorithm.CROSSOVER_RATE = (double) ((JSlider) SettingsPanel.this.getComponent(16)).getValue() / 100;
                 GeneticAlgorithm.MUTATION_RATE = (double) ((JSlider) SettingsPanel.this.getComponent(18)).getValue() / 100;
+                Population.ELITISM_K = ((JSlider) SettingsPanel.this.getComponent(20)).getValue();
+                Population.POP_SIZE = ((JSlider) SettingsPanel.this.getComponent(22)).getValue();
 
-                SimAnnealing.coolingRate = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(21)).getText());
-                SimAnnealing.STOP_CONDITION = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(23)).getText());
+                SimAnnealing.coolingRate = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(25)).getText());
+                SimAnnealing.STOP_CONDITION = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(27)).getText());
 
                 JPanel algorithmPanel = ((JPanel) SettingsPanel.this.getComponent(11));
 
@@ -139,13 +142,21 @@ public class SettingsPanel extends JPanel {
         setGAOptions();
         setSAOptions();
 
+        label = new JLabel();
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 0;
+        c.weightx = 2;
+        c.gridy = 15;
+        c.ipady = 150;
+        this.add(label, c);
+
     }
 
     public void setSAOptions() {
         JLabel label = new JLabel("Opcoes Arrefecimento Simulado: ", SwingConstants.CENTER);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
-        c.gridy = 10;
+        c.gridy = 12;
         c.gridwidth = 2;
         this.add(label, c);
 
@@ -153,27 +164,27 @@ public class SettingsPanel extends JPanel {
         label = new JLabel("Cooling Rate: ");
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
-        c.gridy = 11;
+        c.gridy = 13;
         this.add(label, c);
 
         JTextField ite = new JTextField(15);
         ite.setText(String.valueOf(SimAnnealing.coolingRate));
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
-        c.gridy = 11;
+        c.gridy = 13;
         this.add(ite, c);
 
         label = new JLabel("Stopping Temperature: ");
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
-        c.gridy = 12;
+        c.gridy = 14;
         this.add(label, c);
 
         ite = new JTextField(15);
         ite.setText(String.valueOf(SimAnnealing.STOP_CONDITION));
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
-        c.gridy = 12;
+        c.gridy = 14;
         this.add(ite, c);
 
     }
@@ -233,6 +244,37 @@ public class SettingsPanel extends JPanel {
         c.gridy = 9;
         this.add(slider, c);
 
+        label = new JLabel("K Elitism: ");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 0;
+        c.gridy = 10;
+        this.add(label, c);
+
+        slider = new JSlider(1, 10, Population.ELITISM_K);
+        slider.setPaintTicks(true);
+        slider.setPaintLabels(true);
+        slider.setMajorTickSpacing(1);
+
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 1;
+        c.gridy = 10;
+        this.add(slider, c);
+
+        label = new JLabel("Population Size: ");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 0;
+        c.gridy = 11;
+        this.add(label, c);
+
+        slider = new JSlider(10, 200, Population.POP_SIZE);
+        slider.setPaintTicks(true);
+        slider.setPaintLabels(true);
+        slider.setMajorTickSpacing(30);
+
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 1;
+        c.gridy = 11;
+        this.add(slider, c);
 
     }
 

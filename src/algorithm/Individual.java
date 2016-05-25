@@ -8,7 +8,6 @@ import data.Database;
 
 import java.text.NumberFormat;
 import java.util.Arrays;
-import java.util.BitSet;
 import java.util.Random;
 
 public class Individual {
@@ -41,6 +40,15 @@ public class Individual {
     public Individual(Individual ind) {
         this.genes = Arrays.copyOf(ind.genes, ind.genes.length);
         this.fitness = ind.getFitnessValue();
+    }
+
+    public static void main(String ags[]) {
+        Individual ind = new Individual();
+        ind.randGenes();
+        System.out.println(ind);
+
+        Individual ind2 = new Individual(ind);
+        System.out.println(ind);
     }
 
     public void addFitness(int fit) {
@@ -100,7 +108,6 @@ public class Individual {
         return count;
     }
 
-
     public void mutate() {
         Random rand = new Random();
         int index = rand.nextInt(SIZE);
@@ -116,15 +123,6 @@ public class Individual {
     public double evaluate() {
         new Evaluate(this).run();
         return fitness;
-    }
-
-    public static void main(String ags[]) {
-        Individual ind = new Individual();
-        ind.randGenes();
-        System.out.println(ind);
-
-        Individual ind2 = new Individual(ind);
-        System.out.println(ind);
     }
 
 }

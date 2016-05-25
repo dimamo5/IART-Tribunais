@@ -2,6 +2,7 @@
  * Created by diogo on 08/03/2016.
  */
 package data;
+
 import org.json.simple.JSONObject;
 
 public class County {

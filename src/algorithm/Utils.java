@@ -1,7 +1,7 @@
 package algorithm;
 
 public class Utils {
-    public static final double EARTHRADIUS=6371000; //METERS
+    public static final double EARTHRADIUS = 6371000; //METERS
 
     public static double distFrom(double lat1, double lng1, double lat2, double lng2) {
         double dLat = Math.toRadians(lat2 - lat1);

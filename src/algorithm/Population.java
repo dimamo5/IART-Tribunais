@@ -7,8 +7,8 @@ import java.util.Random;
  */
 
 public class Population {
-    public final static int ELITISM_K = 5;
-    public final static int POP_SIZE = 200 + ELITISM_K;  // population size
+    public static int ELITISM_K = 5;
+    public static int POP_SIZE = 150 + ELITISM_K;  // population size
 
     private static Random m_rand = new Random();  // random-number generator
     private Individual[] m_population;
@@ -28,13 +28,13 @@ public class Population {
         this.evaluate();
     }
 
+    public Individual[] getPopulation() {
+        return this.m_population;
+    }
+
     public void setPopulation(Individual[] newPop) {
         // this.m_population = newPop;
         System.arraycopy(newPop, 0, this.m_population, 0, POP_SIZE);
-    }
-
-    public Individual[] getPopulation() {
-        return this.m_population;
     }
 
     public double evaluate() {

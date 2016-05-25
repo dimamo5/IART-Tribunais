@@ -10,9 +10,9 @@ import java.util.ArrayList;
  * Created by diogo on 12/03/2016.
  */
 public class Database {
+    private static Database instance = null;
     private ArrayList<County> counties = new ArrayList<County>();
     private int size;
-    private static Database instance = null;
     private long[][] distMatrix;
 
     private Database() {
@@ -25,9 +25,20 @@ public class Database {
             e.printStackTrace();
         }
         this.size = counties.size();
-        distMatrix=new long[size][size];
+        distMatrix = new long[size][size];
         calcDistMatrix();
 
+    }
+
+    public static Database getInstance() {
+        if (instance == null) {
+            instance = new Database();
+        }
+        return instance;
+    }
+
+    public static void main(String[] args) {
+        Database.getInstance();
     }
 
     public long[][] getDistMatrix() {
@@ -46,21 +57,14 @@ public class Database {
         return counties;
     }
 
-    public static Database getInstance() {
-        if (instance == null) {
-            instance = new Database();
-        }
-        return instance;
-    }
-
     /**
      * Pre process the distances between all counties and puts them into a matrix
      */
-    public void calcDistMatrix(){
-        for(int i =1;i<size;i++){
-            long[] row= distMatrix[i-1];
-            for(int m=1;m<size;m++){
-                distMatrix[i-1][m-1]= (long) Utils.distFrom(this.getCounty(i).getLatitude(),this.getCounty(i).getLongitude(),this.getCounty(m).getLatitude(),this.getCounty(m).getLongitude());
+    public void calcDistMatrix() {
+        for (int i = 1; i < size; i++) {
+            long[] row = distMatrix[i - 1];
+            for (int m = 1; m < size; m++) {
+                distMatrix[i - 1][m - 1] = (long) Utils.distFrom(this.getCounty(i).getLatitude(), this.getCounty(i).getLongitude(), this.getCounty(m).getLatitude(), this.getCounty(m).getLongitude());
             }
         }
         // TODO: 21/05/2016 verificar se info na matrix está correcta já que existem muitos valores a 0 no final
@@ -71,10 +75,6 @@ public class Database {
             }
             System.out.print("\n");
         }*/
-    }
-
-    public static void main(String[] args){
-        Database.getInstance();
     }
 
 }

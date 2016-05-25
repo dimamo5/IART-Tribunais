@@ -6,11 +6,12 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.text.NumberFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Locale;
 
 /**
  * Created by diogo on 10/03/2016.
@@ -26,6 +27,62 @@ public class ParseCounty {
         }
     }
 
+    /**
+     * Gets the latitude and longitude of a specific County Name
+     *
+     * @param countyName County Name
+     * @return Json file with all the geografic info
+     * @throws IOException
+     */
+    public static String getCoords(String countyName) throws IOException {
+        String googlekey = "AIzaSyAuUKUyv4JqgLzbTBtiic3XGFXSNvvqiRI";
+
+        URL url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address=" + URLEncoder.encode(countyName, "utf-8") + ",Portugal&key=" + googlekey);
+        InputStream is = (InputStream) url.getContent();
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
+        String line;
+        StringBuilder sb = new StringBuilder();
+        while ((line = br.readLine()) != null)
+            sb.append(line);
+        return sb.toString();
+
+    }
+
+    public static void main(String args[]) {
+
+        ParseCounty p = new ParseCounty("resources/countyInfo.json");
+       /* ArrayList<County> c = null;
+
+        try {
+           c =  p.getCounties();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        String[] splitted;
+        String cost, new_cost = null;
+        for(County county : c ){
+
+            cost = Double.toString(county.getConstrution_cost());
+            splitted = cost.split("\\.");
+
+            if(splitted[0].length() == 1){
+                new_cost = cost.replaceAll("\\.","");
+            }
+            else new_cost = cost;
+
+          //  System.out.print("Previous: " + county.getConstrution_cost() + " After: " );
+
+            county.setConstrution_cost(Double.parseDouble(new_cost));
+
+         //   System.out.println(county.getConstrution_cost());
+        }
+
+        p.write_counties(c, "resources/counties.json");*/
+
+    }
 
     public ArrayList<County> getCounties() throws IOException, ParseException {
         ArrayList<County> listCounties = new ArrayList<County>();
@@ -63,28 +120,6 @@ public class ParseCounty {
         return listCounties;
     }
 
-
-    /**
-     * Gets the latitude and longitude of a specific County Name
-     *
-     * @param countyName County Name
-     * @return Json file with all the geografic info
-     * @throws IOException
-     */
-    public static String getCoords(String countyName) throws IOException {
-        String googlekey = "AIzaSyAuUKUyv4JqgLzbTBtiic3XGFXSNvvqiRI";
-
-        URL url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address=" + URLEncoder.encode(countyName, "utf-8") + ",Portugal&key=" + googlekey);
-        InputStream is = (InputStream) url.getContent();
-        BufferedReader br = new BufferedReader(new InputStreamReader(is));
-        String line;
-        StringBuilder sb = new StringBuilder();
-        while ((line = br.readLine()) != null)
-            sb.append(line);
-        return sb.toString();
-
-    }
-
     /**
      * Transforms the old json file with only the County Population info and adds the location.
      * Creates a new json file with all the info compiled
@@ -93,7 +128,7 @@ public class ParseCounty {
         JSONParser parser = new JSONParser();
 
         ArrayList<County> counties = new ArrayList<County>();
-       // ArrayList<String> counties_name = new ArrayList<String>();
+        // ArrayList<String> counties_name = new ArrayList<String>();
 
         try {
 
@@ -174,7 +209,7 @@ public class ParseCounty {
         }
     }
 
-    void write_counties(ArrayList<County> c, String file_path){
+    void write_counties(ArrayList<County> c, String file_path) {
 
         JSONArray countiesArray = new JSONArray();
 
@@ -192,43 +227,6 @@ public class ParseCounty {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-
-    public static void main(String args[]){
-
-        ParseCounty p = new ParseCounty("resources/countyInfo.json");
-       /* ArrayList<County> c = null;
-
-        try {
-           c =  p.getCounties();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        String[] splitted;
-        String cost, new_cost = null;
-        for(County county : c ){
-
-            cost = Double.toString(county.getConstrution_cost());
-            splitted = cost.split("\\.");
-
-            if(splitted[0].length() == 1){
-                new_cost = cost.replaceAll("\\.","");
-            }
-            else new_cost = cost;
-
-          //  System.out.print("Previous: " + county.getConstrution_cost() + " After: " );
-
-            county.setConstrution_cost(Double.parseDouble(new_cost));
-
-         //   System.out.println(county.getConstrution_cost());
-        }
-
-        p.write_counties(c, "resources/counties.json");*/
-
     }
 
 

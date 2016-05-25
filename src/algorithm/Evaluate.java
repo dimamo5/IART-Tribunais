@@ -2,9 +2,6 @@ package algorithm;
 
 import data.Database;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 /**
  * Created by diogo on 12/03/2016.
  */
@@ -43,14 +40,14 @@ public class Evaluate implements Runnable {
         }
     }
 
-    public int getMin(int countyPos){
-        long[] row= db.getDistMatrix()[countyPos];
+    public int getMin(int countyPos) {
+        long[] row = db.getDistMatrix()[countyPos];
         long min = Long.MAX_VALUE;
-        int pos=0;
-        for ( int i =0; i< row.length;i++){
-            if(min> row[i] && row[i]>=7 && individual.getGene(i)){   //GPS Coord has a tolerance of 7 meters
-                min= row[i];
-                pos=i;
+        int pos = 0;
+        for (int i = 0; i < row.length; i++) {
+            if (min > row[i] && row[i] >= 7 && individual.getGene(i)) {   //GPS Coord has a tolerance of 7 meters
+                min = row[i];
+                pos = i;
             }
         }
         return pos;

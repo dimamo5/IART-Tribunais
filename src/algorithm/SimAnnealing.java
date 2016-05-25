@@ -1,26 +1,18 @@
 package algorithm;
 
-import java.io.*;
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Locale;
 
 
 public class SimAnnealing {
 
-    private final double STARTING_TEMP = 1.0;
     public static double STOP_CONDITION = 0.01;
-    public double temperature;
-    private Individual individual;
     public static double coolingRate = 0.01;
+    private final double STARTING_TEMP = 1.0;
+    public double temperature;
     public double stop_cond;
-
-    public void setCoolingRate(double coolingRate) {
-        this.coolingRate = coolingRate;
-    }
-
-    public void setSTOP_CONDITION(double STOP_CONDITION) {
-        this.STOP_CONDITION = STOP_CONDITION;
-    }
+    private Individual individual;
 
     public SimAnnealing(Individual ind) {
         this.individual = new Individual(ind);
@@ -33,6 +25,36 @@ public class SimAnnealing {
         this.individual.randGenes();
         this.temperature = STARTING_TEMP;
         this.stop_cond = STARTING_TEMP * STOP_CONDITION;
+    }
+
+    // Calculate the acceptance probability
+    public static boolean acceptanceProbability(double E, double newE, double temperature) {
+
+        if (newE == 0.0)
+            return false;
+
+        double delta_E = newE - E;
+
+        double k = Math.exp(-(((((delta_E) / E) * 10) / temperature) + 1)); //percentage
+        //double k = exp(delta_E / temperature);
+        return k <= 1 && (delta_E > 0 || k > Math.random());
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        // (int i = 0; i < 10; i++) {
+        SimAnnealing sm1 = new SimAnnealing(new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111011111111101111111010111111011111011110101100111110111000100000101000001001100001000000000000000000100000000000000000100000000000000000000000000000000000000000000000000000000000000000"));
+        SimAnnealing sm = new SimAnnealing();
+        sm1.run();
+        //}
+    }
+
+    public void setCoolingRate(double coolingRate) {
+        this.coolingRate = coolingRate;
+    }
+
+    public void setSTOP_CONDITION(double STOP_CONDITION) {
+        this.STOP_CONDITION = STOP_CONDITION;
     }
 
     public Individual getBestInd() {
@@ -145,29 +167,6 @@ public class SimAnnealing {
         String s2 = String.format("%15s\n", NumberFormat.getNumberInstance(Locale.GERMANY).format(this.individual.getFitnessValue()));
         System.out.printf(s);
         System.out.printf(s2 + "\n");
-    }
-
-    // Calculate the acceptance probability
-    public static boolean acceptanceProbability(double E, double newE, double temperature) {
-
-        if (newE == 0.0)
-            return false;
-
-        double delta_E = newE - E;
-
-        double k = Math.exp(-(((((delta_E) / E) * 10) / temperature) + 1)); //percentage
-        //double k = exp(delta_E / temperature);
-        return k <= 1 && (delta_E > 0 || k > Math.random());
-    }
-
-
-    public static void main(String[] args) throws IOException {
-
-        // (int i = 0; i < 10; i++) {
-        SimAnnealing sm1 = new SimAnnealing(new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111011111111101111111010111111011111011110101100111110111000100000101000001001100001000000000000000000100000000000000000100000000000000000000000000000000000000000000000000000000000000000"));
-        SimAnnealing sm = new SimAnnealing();
-        sm1.run();
-        //}
     }
     // TODO: 25/05/2016 @sergio faz a optimização
 }
