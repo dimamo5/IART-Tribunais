@@ -8,6 +8,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +28,7 @@ public class MapPanel extends JPanel{
     private Individual ind;
 
     public MapPanel(){
-        ind = new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+        //ind = new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
         //ind.randGenes();
         try {
             map = ImageIO.read(new File(System.getProperty("user.dir") + "/resources/img/map.png"));
@@ -59,16 +60,19 @@ public class MapPanel extends JPanel{
         super.paintComponent(g);
         g.drawImage(map,0,0,map.getWidth(),map.getHeight(),this);
         double posX,posY;
-        for(int i = 0; i< Individual.SIZE; i++){
-            if (ind.getGene(i)) {
-                posX = (Database.getInstance().getCounty(i).getLongitude() - LEFT_SIZE) * PIXEL_PER_COORD_HOR;
-                posY = (TOP_SIZE - Database.getInstance().getCounty(i).getLatitude()) * PIXEL_PER_COORD_VER;
-                //g.drawImage(court,(int)posX,(int)posY,court.getWidth(),court.getHeight(),this);
-                g.drawOval((int) posX, (int) posY, 5, 5);
-                //System.out.println("Court-> hor: " + posX + " ver: " + posY);
+        if (ind != null) {
+            for (int i = 0; i < Individual.SIZE; i++) {
+                if (ind.getGene(i)) {
+                    posX = (Database.getInstance().getCounty(i).getLongitude() - LEFT_SIZE) * PIXEL_PER_COORD_HOR;
+                    posY = (TOP_SIZE - Database.getInstance().getCounty(i).getLatitude()) * PIXEL_PER_COORD_VER;
+
+                    Graphics2D g2d = (Graphics2D) g;
+                    Ellipse2D.Double circle = new Ellipse2D.Double((int) posX, (int) posY, 5, 5);
+                    g2d.fill(circle);
+                    //g.drawOval((int) posX, (int) posY, 5, 5);
+                }
             }
         }
-
     }
 
 
@@ -81,8 +85,13 @@ public class MapPanel extends JPanel{
     }
 
     public void startGA(GeneticAlgorithm ga) {
-        ga.start();
-        ga.getBestIndiv();
+        for (int ite = 0; ite < GeneticAlgorithm.MAX_ITER; ite++) {
+            ga.startIte(ite);
+            if (ite % 5 == 0) {
+                ind = ga.getBestIndiv();
+                this.paintImmediately(0, 0, this.getWidth(), this.getHeight());
+            }
+        }
     }
 
 }

@@ -22,10 +22,12 @@ public class SettingsPanel extends JPanel {
     public SettingsPanel() {
         super();
         this.setLayout(new GridBagLayout());
-
-        JButton button;
         this.setBorder(new EmptyBorder(5, 25, 5, 5));
-        button = new JButton("Start");
+        c.weightx = 1;
+        c.weighty = 1;
+        c.anchor = GridBagConstraints.NORTH;
+
+        JButton button = new JButton("Start");
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
