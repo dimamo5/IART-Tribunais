@@ -5,6 +5,7 @@ import data.Database;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -25,13 +26,15 @@ public class MapPanel extends JPanel{
     private Individual ind;
 
     public MapPanel(){
-        ind=new Individual();
-        ind.randGenes();
+        ind = new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+        //ind.randGenes();
         try {
             map = ImageIO.read(new File(System.getProperty("user.dir") + "/resources/img/map.png"));
             PIXEL_PER_COORD_HOR=map.getWidth()/(RIGHT_SIZE-LEFT_SIZE);
             PIXEL_PER_COORD_VER=map.getHeight()/(TOP_SIZE-BOTTOM_SIZE);
-            System.out.println("hor: " + PIXEL_PER_COORD_HOR +" ver: "+PIXEL_PER_COORD_VER);
+            this.setMinimumSize(new Dimension(map.getWidth(), map.getHeight()));
+            this.setSize(new Dimension(map.getWidth(), map.getHeight()));
+            this.setPreferredSize(new Dimension(map.getWidth(), map.getHeight()));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,7 +46,9 @@ public class MapPanel extends JPanel{
             map = ImageIO.read(new File(System.getProperty("user.dir") + "/resources/img/map.png"));
             PIXEL_PER_COORD_HOR=map.getWidth()/(RIGHT_SIZE-LEFT_SIZE);
             PIXEL_PER_COORD_VER=map.getHeight()/(TOP_SIZE-BOTTOM_SIZE);
-            System.out.println("hor: " + PIXEL_PER_COORD_HOR +" ver: "+PIXEL_PER_COORD_VER);
+            this.setMinimumSize(new Dimension(map.getWidth(), map.getHeight()));
+            this.setSize(new Dimension(map.getWidth(), map.getHeight()));
+            this.setPreferredSize(new Dimension(map.getWidth(), map.getHeight()));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,7 +64,7 @@ public class MapPanel extends JPanel{
                 posY = (TOP_SIZE - Database.getInstance().getCounty(i).getLatitude()) * PIXEL_PER_COORD_VER;
                 //g.drawImage(court,(int)posX,(int)posY,court.getWidth(),court.getHeight(),this);
                 g.drawOval((int) posX, (int) posY, 5, 5);
-                System.out.println("Court-> hor: " + posX + " ver: " + posY);
+                //System.out.println("Court-> hor: " + posX + " ver: " + posY);
             }
         }
 
