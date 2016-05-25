@@ -2,6 +2,7 @@ package graphics;
 
 import algorithm.GeneticAlgorithm;
 import algorithm.Individual;
+import algorithm.SimAnnealing;
 import data.Database;
 
 import javax.imageio.ImageIO;
@@ -94,4 +95,10 @@ public class MapPanel extends JPanel{
         }
     }
 
+    // TODO: 25/05/2016 Fazer para o encadeado
+    public void startSA(SimAnnealing sa) {
+        while (sa.temperature < sa.stop_cond) {
+            sa.runIte();
+        }
+    }
 }

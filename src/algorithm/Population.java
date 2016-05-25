@@ -51,7 +51,6 @@ public class Population {
         for (idx = 0; idx < POP_SIZE && randNum > 0; ++idx) {
             randNum -= m_population[idx].getFitnessValue();
         }
-        //System.out.println("roullete"+m_population[idx - 1].getGenes().length());
         return m_population[idx - 1];
     }
 

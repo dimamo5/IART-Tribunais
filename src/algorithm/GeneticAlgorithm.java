@@ -24,6 +24,7 @@ public class GeneticAlgorithm {
         return bestIndiv;
     }
 
+    // TODO: 25/05/2016 melhorar isto
     public void startIte(int ite) {
         // main loop
         int count;

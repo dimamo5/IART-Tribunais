@@ -1,30 +1,22 @@
 package algorithm;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.io.*;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import static java.lang.Math.exp;
-
 
 public class SimAnnealing {
 
-    private /*final*/ double STARTING_TEMP = 1.0;
+    private final double STARTING_TEMP = 1.0;
     public static double STOP_CONDITION = 0.01;
-
+    public double temperature;
     private Individual individual;
     public static double coolingRate = 0.001;
+    public double stop_cond;
 
     public void setCoolingRate(double coolingRate) {
         this.coolingRate = coolingRate;
     }
-
-    public void setSTARTING_TEMP(double STARTING_TEMP) {
-        this.STARTING_TEMP = STARTING_TEMP;
-    }
-
 
     public void setSTOP_CONDITION(double STOP_CONDITION) {
         this.STOP_CONDITION = STOP_CONDITION;
@@ -32,17 +24,71 @@ public class SimAnnealing {
 
     public SimAnnealing(Individual ind) {
         this.individual = ind;
+        this.temperature = STARTING_TEMP;
     }
 
     public SimAnnealing() {
         this.individual = new Individual();
         this.individual.randGenes();
+        this.temperature = STARTING_TEMP;
+        this.stop_cond = STARTING_TEMP * STOP_CONDITION;
+    }
+
+    public void runIte() {
+        int total = 0, bad = 0, best = 0, good = 0, fitness_diff = 0, no_changes = 0, genes_iguais = 0, changes = 0;
+
+        double f, newF;
+        if (temperature > stop_cond) {
+            for (int i = 0; i < 140; i++) {
+                Individual newInd = new Individual(this.individual);  //novo individuo
+                newInd.mutate();
+
+                newF = newInd.evaluate(); //newInd Rating
+                f = this.individual.evaluate(); //actualInd Rating
+
+                /*
+                if (!this.individual.getGenes().equals(newInd.getGenes())) {
+                    if (this.individual.getFitnessValue() != newInd.getFitnessValue())
+                        fitness_diff++;
+                } else
+                    genes_iguais++;
+*/
+                total++;//*/
+                if (acceptanceProbability(f, newF, temperature)) {
+                    if (!this.individual.getGenes().equals(newInd.getGenes())) {
+                        this.individual = newInd;
+                        changes++;
+                    }
+
+                    if ((newF - f) <= 0)
+                        bad++;
+                    else
+                        good++;
+                } else
+                    no_changes++;
+
+                if (this.individual.getFitnessValue() > best)   /* testing related */
+                    best = this.individual.getFitnessValue();
+            }
+
+            temperature *= 1 - coolingRate; // Cool system
+        }
+
+        System.out.println("\nGenes Iguais: " + genes_iguais
+                + "\nFitness Diferente: " + fitness_diff
+                + "\nTroca p/ Individuo != actual: " + changes
+                + "\nUpgrade: " + good
+                + "\nDowngrade(descida na colina):" + bad
+                //  +"\nTotal trocas: " + total_changes
+                + "\nTotal Iterações: " + total);
+
+        String s = String.format("\n%15s\n", NumberFormat.getNumberInstance(Locale.GERMANY).format(best));
+        String s2 = String.format("%15s\n", NumberFormat.getNumberInstance(Locale.GERMANY).format(this.individual.getFitnessValue()));
+        System.out.printf(s);
+        System.out.printf(s2 + "\n");
     }
 
     public void run() throws IOException {
-        double temperature = STARTING_TEMP;
-        double stop_cond = STARTING_TEMP * STOP_CONDITION;
-
         int total = 0, bad = 0, best = 0, good = 0, fitness_diff = 0, no_changes = 0, genes_iguais = 0, changes = 0;
 
         double f, newF;
