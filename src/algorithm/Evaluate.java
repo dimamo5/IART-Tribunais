@@ -19,7 +19,7 @@ public class Evaluate implements Runnable {
     // TODO: 21/05/2016 Ver se é necessario tribunais maximos
     public Evaluate(Individual ind) {
         this.individual = ind;
-        //this.individual.resetFitness();
+        this.individual.resetFitness();
     }
 
     @Override
