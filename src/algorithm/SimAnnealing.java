@@ -4,7 +4,7 @@ public class SimAnnealing {
 
     private final double STARTING_TEMP = 1000;
     private Individual individual;
-    private double coolingRate = 0.01;
+    public static double coolingRate = 0.01;
 
     public SimAnnealing(Individual ind) {
         this.individual = ind;
