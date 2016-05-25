@@ -15,7 +15,7 @@ public class SimAnnealing {
     private double STOP_CONDITION = 0.01;
 
     private Individual individual;
-    private double coolingRate = 0.01;
+    private double coolingRate = 0.001;
 
     public void setCoolingRate(double coolingRate) {
         this.coolingRate = coolingRate;
@@ -54,13 +54,14 @@ public class SimAnnealing {
                 newF = newInd.evaluate(); //newInd Rating
                 f = this.individual.evaluate(); //actualInd Rating
 
+                /*
                 if (!this.individual.getGenes().equals(newInd.getGenes())) {
                     if (this.individual.getFitnessValue() != newInd.getFitnessValue())
                         fitness_diff++;
                 } else
                     genes_iguais++;
-
-                total++;
+*/
+                total++;//*/
                 if (acceptanceProbability(f, newF, temperature)) {
                     if (!this.individual.getGenes().equals(newInd.getGenes())) {
                         this.individual = newInd;
@@ -95,10 +96,6 @@ public class SimAnnealing {
         System.out.printf(s2 + "\n");
     }
 
-
-    // TODO: 22/05/2016 Possible optimization: Keep the best individual saved, at the end compare the final result and return to the best state if it's better than the achieved one
-    //maximum possible retries(go back to the best state and startover) to be defined
-
     // Calculate the acceptance probability
     public static boolean acceptanceProbability(double E, double newE, double temperature) {
 
@@ -107,31 +104,15 @@ public class SimAnnealing {
 
         double delta_E = newE - E;
 
-
-        double k = Math.exp(-(((((newE - E) / E) * 10) / temperature) + 1));
+        double k = Math.exp(-(((((delta_E) / E) * 10) / temperature) + 1)); //percentage
         //double k = exp(delta_E / temperature);
-        if (k > 1) {
-            return false;
-        }
-        //System.out.println(newE + "\t\t" + E);
-
-        boolean x = k > Math.random();
-        // System.out.println(x);
-        return delta_E > 0 || x;
-
-        //System.out.println("e^(" + delta_E + "/" + temperature + ") = " + exp(delta_E / temperature));
-
-        //return delta_E >= 0 || 1 + (exp(delta_E/temperature));
-        //return delta_E >= 0 || Math.exp(-(((((newE - E) / E) * 10) / temperature) + 1)) > Math.random();*/
-
-        //return delta_E > 0 || exp(delta_E / temperature) > Math.random();
+        return k <= 1 && (delta_E > 0 || k > Math.random());
     }
 
 
     public static void main(String[] args) throws IOException {
 
-
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 10; i++) {
             SimAnnealing sm1 = new SimAnnealing();
             sm1.setSTOP_CONDITION(0.01);
             // sm1.setSTARTING_TEMP(100*exp(i));
@@ -139,6 +120,4 @@ public class SimAnnealing {
             sm1.run();
         }
     }
-
-
 }
