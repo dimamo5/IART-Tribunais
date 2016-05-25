@@ -12,10 +12,10 @@ import static java.lang.Math.exp;
 public class SimAnnealing {
 
     private /*final*/ double STARTING_TEMP = 1.0;
-    private double STOP_CONDITION = 0.01;
+    public static double STOP_CONDITION = 0.01;
 
     private Individual individual;
-    private double coolingRate = 0.001;
+    public static double coolingRate = 0.001;
 
     public void setCoolingRate(double coolingRate) {
         this.coolingRate = coolingRate;
