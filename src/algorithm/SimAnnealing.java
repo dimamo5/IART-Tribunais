@@ -34,6 +34,10 @@ public class SimAnnealing {
         this.stop_cond = STARTING_TEMP * STOP_CONDITION;
     }
 
+    public Individual getBestInd() {
+        return individual;
+    }
+
     public void runIte() {
         int total = 0, bad = 0, best = 0, good = 0, fitness_diff = 0, no_changes = 0, genes_iguais = 0, changes = 0;
 
@@ -74,7 +78,7 @@ public class SimAnnealing {
             temperature *= 1 - coolingRate; // Cool system
         }
 
-        System.out.println("\nGenes Iguais: " + genes_iguais
+        /*System.out.println("\nGenes Iguais: " + genes_iguais
                 + "\nFitness Diferente: " + fitness_diff
                 + "\nTroca p/ Individuo != actual: " + changes
                 + "\nUpgrade: " + good
@@ -85,7 +89,7 @@ public class SimAnnealing {
         String s = String.format("\n%15s\n", NumberFormat.getNumberInstance(Locale.GERMANY).format(best));
         String s2 = String.format("%15s\n", NumberFormat.getNumberInstance(Locale.GERMANY).format(this.individual.getFitnessValue()));
         System.out.printf(s);
-        System.out.printf(s2 + "\n");
+        System.out.printf(s2 + "\n");*/
     }
 
     public void run() throws IOException {

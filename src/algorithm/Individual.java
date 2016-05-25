@@ -7,6 +7,7 @@ package algorithm;
 import data.Database;
 
 import java.text.NumberFormat;
+import java.util.Arrays;
 import java.util.BitSet;
 import java.util.Random;
 
@@ -24,21 +25,21 @@ public class Individual {
         this.fitness = 0;
     }
 
-    public Individual(String genes){
-        SIZE=genes.length();
+    public Individual(String genes) {
+        SIZE = genes.length();
         this.genes = new boolean[SIZE];
-        this.fitness=0;
+        this.fitness = 0;
         for (int i = 0; i < genes.length(); ++i) {
-            if(genes.charAt(i)=='0'){
-                this.setGene(i,false);
-            }else{
-                this.setGene(i,true);
+            if (genes.charAt(i) == '0') {
+                this.setGene(i, false);
+            } else {
+                this.setGene(i, true);
             }
         }
     }
 
     public Individual(Individual ind) {
-        System.arraycopy(this.genes, 0, ind.getGenes(), 0, ind.getGenes().length);
+        this.genes = Arrays.copyOf(ind.genes, ind.genes.length);
         this.fitness = ind.getFitnessValue();
     }
 
@@ -53,12 +54,12 @@ public class Individual {
 
     @Override
     public String toString() {
-        String s="";
+        String s = "";
         for (int i = 0; i < genes.length; i++) {
             if (genes[i]) {
-                s+="1";
-            }else{
-                s+="0";
+                s += "1";
+            } else {
+                s += "0";
             }
         }
         return "Individual{" + "Count: " + this.countGenePositive() +
@@ -89,14 +90,15 @@ public class Individual {
             this.setGene(i, rand.nextBoolean());
         }
     }
-    public int countGenePositive(){
-        int count=0;
+
+    public int countGenePositive() {
+        int count = 0;
         for (int i = 0; i < genes.length; i++) {
             if (getGene(i)) {
                 count++;
             }
         }
-        return  count;
+        return count;
     }
 
 
@@ -109,12 +111,21 @@ public class Individual {
     /**
      * Calculates the fitness value of the individual
      * NOTE: Avoid using this since evalute implements Threads and function better with them!
+     *
      * @return
      */
     public double evaluate() {
-       new Evaluate(this).run();
+        new Evaluate(this).run();
         return fitness;
     }
 
+    public static void main(String ags[]) {
+        Individual ind = new Individual();
+        ind.randGenes();
+        System.out.println(ind);
+
+        Individual ind2 = new Individual(ind);
+        System.out.println(ind);
+    }
 
 }

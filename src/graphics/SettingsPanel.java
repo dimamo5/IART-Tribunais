@@ -46,7 +46,15 @@ public class SettingsPanel extends JPanel {
                 System.out.println(GeneticAlgorithm.MAX_ITER + " " + GeneticAlgorithm.CROSSOVER_RATE + " " + GeneticAlgorithm.MUTATION_RATE + " " +
                         SimAnnealing.coolingRate + " " + SimAnnealing.STOP_CONDITION);
 
-                ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startGA(new GeneticAlgorithm());
+                JPanel algorithmPanel = ((JPanel) SettingsPanel.this.getComponent(11));
+
+                if (((JRadioButton) algorithmPanel.getComponent(0)).isSelected()) {
+                    ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startGA(new GeneticAlgorithm());
+                } else if (((JRadioButton) algorithmPanel.getComponent(1)).isSelected()) {
+                    ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startSA(new SimAnnealing());
+                } else if (((JRadioButton) algorithmPanel.getComponent(2)).isSelected()) {
+                    ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startGASA();
+                }
 
             }
         });

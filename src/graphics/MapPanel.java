@@ -29,8 +29,6 @@ public class MapPanel extends JPanel{
     private Individual ind;
 
     public MapPanel(){
-        //ind = new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
-        //ind.randGenes();
         try {
             map = ImageIO.read(new File(System.getProperty("user.dir") + "/resources/img/map.png"));
             PIXEL_PER_COORD_HOR=map.getWidth()/(RIGHT_SIZE-LEFT_SIZE);
@@ -94,11 +92,20 @@ public class MapPanel extends JPanel{
             }
         }
     }
-
     // TODO: 25/05/2016 Fazer para o encadeado
     public void startSA(SimAnnealing sa) {
-        while (sa.temperature < sa.stop_cond) {
+        while (sa.temperature > sa.stop_cond) {
             sa.runIte();
+            ind = sa.getBestInd();
+            this.paintImmediately(0, 0, this.getWidth(), this.getHeight());
         }
+    }
+
+    public void startGASA() {
+        GeneticAlgorithm ga = new GeneticAlgorithm();
+        startGA(ga);
+        SimAnnealing sa = new SimAnnealing(ga.getBestIndiv());
+        startSA(sa);
+
     }
 }
