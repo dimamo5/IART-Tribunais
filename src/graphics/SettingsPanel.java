@@ -1,5 +1,6 @@
 package graphics;
 
+import algorithm.Evaluate;
 import algorithm.GeneticAlgorithm;
 import algorithm.SimAnnealing;
 import data.Database;
@@ -7,6 +8,8 @@ import data.Database;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by diogo on 25/05/2016.
@@ -26,6 +29,11 @@ public class SettingsPanel extends JPanel {
         this.setBorder(new EmptyBorder(5, 25, 5, 5));
 
         button = new JButton("Start");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                //Evaluate.
+            }
+        });
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 0;
@@ -115,42 +123,33 @@ public class SettingsPanel extends JPanel {
         this.add(label, c);
 
         // TODO: 25/05/2016 Traduzir isto e da funcao abaixo
-        label = new JLabel("Cooling Rate (%): ");
+        label = new JLabel("Cooling Rate: ");
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 11;
         this.add(label, c);
 
-        JSlider slider = new JSlider(1, 100, (int) (SimAnnealing.coolingRate * 100));
-        slider.setPaintTicks(true);
-        slider.setPaintLabels(true);
-        slider.setMajorTickSpacing(10);
-
+        JTextField ite = new JTextField(15);
+        ite.setText(String.valueOf(SimAnnealing.coolingRate));
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
         c.gridy = 11;
-        this.add(slider, c);
+        this.add(ite, c);
 
-        // TODO: 25/05/2016 Acabar isto
-        label = new JLabel("Mutation Rate: ");
+        label = new JLabel("Stopping Temperature: ");
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
-        c.gridy = 9;
+        c.gridy = 12;
         this.add(label, c);
 
-        slider = new JSlider(10, 100, (int) (GeneticAlgorithm.MUTATION_RATE * 100));
-        slider.setPaintTicks(true);
-        slider.setPaintLabels(true);
-        slider.setMajorTickSpacing(10);
-
+        ite = new JTextField(15);
+        ite.setText(String.valueOf(SimAnnealing.STOP_CONDITION));
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
-        c.gridy = 9;
-        this.add(slider, c);
-
+        c.gridy = 12;
+        this.add(ite, c);
 
     }
-
 
     public void setGAOptions() {
         JLabel label = new JLabel("Opcoes Algoritmo Genetico: ", SwingConstants.CENTER);
@@ -191,16 +190,16 @@ public class SettingsPanel extends JPanel {
         c.gridy = 8;
         this.add(slider, c);
 
-        label = new JLabel("Mutation Rate: ");
+        label = new JLabel("Mutation Rate (%): ");
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 9;
         this.add(label, c);
 
-        slider = new JSlider(10, 100, (int) (GeneticAlgorithm.MUTATION_RATE * 100));
+        slider = new JSlider(5, 50, (int) (GeneticAlgorithm.MUTATION_RATE * 100));
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
-        slider.setMajorTickSpacing(10);
+        slider.setMajorTickSpacing(5);
 
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;

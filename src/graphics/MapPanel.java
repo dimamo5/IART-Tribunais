@@ -1,5 +1,6 @@
 package graphics;
 
+import algorithm.GeneticAlgorithm;
 import algorithm.Individual;
 import data.Database;
 
@@ -79,5 +80,8 @@ public class MapPanel extends JPanel{
         this.ind = ind;
     }
 
+    public void startGA(GeneticAlgorithm ga) {
+
+    }
 
 }
