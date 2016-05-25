@@ -17,9 +17,6 @@ import java.awt.event.ActionListener;
 public class SettingsPanel extends JPanel {
     public final int COUNTY_SIZE = Database.getInstance().getSize();
     public final static int MIN_COUNTY_SIZE = 20;
-    private int constTribunal = 2;
-    private int constContruction = 1;
-    private int maxDist = 50000;
     GridBagConstraints c = new GridBagConstraints();
 
     public SettingsPanel() {
@@ -52,7 +49,7 @@ public class SettingsPanel extends JPanel {
         c.gridy = 1;
         this.add(label, c);
 
-        JSlider slider = new JSlider(MIN_COUNTY_SIZE, COUNTY_SIZE, 100);
+        JSlider slider = new JSlider(MIN_COUNTY_SIZE, COUNTY_SIZE, Evaluate.MAX_NO_TRIBUNAL);
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
         slider.setMajorTickSpacing(50);
@@ -68,7 +65,7 @@ public class SettingsPanel extends JPanel {
         c.gridy = 2;
         this.add(label, c);
 
-        slider = new JSlider(1, 5, this.constTribunal);
+        slider = new JSlider(1, 5, Evaluate.CONST_ACCESS_TRIBUNAL);
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
         slider.setMajorTickSpacing(1);
@@ -84,7 +81,7 @@ public class SettingsPanel extends JPanel {
         c.gridy = 3;
         this.add(label, c);
 
-        slider = new JSlider(1, 5, this.constContruction);
+        slider = new JSlider(1, 5, Evaluate.CONST_CONSTRUCT_TRIBUNAL);
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
         slider.setMajorTickSpacing(1);
@@ -102,7 +99,7 @@ public class SettingsPanel extends JPanel {
         this.add(label, c);
 
         JTextField maxDistBox = new JTextField(15);
-        maxDistBox.setText(String.valueOf(maxDist));
+        maxDistBox.setText(String.valueOf(Evaluate.MAX_DIST));
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
         c.gridy = 4;
@@ -168,7 +165,7 @@ public class SettingsPanel extends JPanel {
         this.add(label, c);
 
         JTextField ite = new JTextField(15);
-        ite.setText(String.valueOf(maxDist));
+        ite.setText(String.valueOf(GeneticAlgorithm.MAX_ITER));
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
         c.gridy = 7;
