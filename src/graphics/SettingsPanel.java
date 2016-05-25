@@ -20,15 +20,32 @@ public class SettingsPanel extends JPanel {
     GridBagConstraints c = new GridBagConstraints();
 
     public SettingsPanel() {
+        super();
         this.setLayout(new GridBagLayout());
 
         JButton button;
         this.setBorder(new EmptyBorder(5, 25, 5, 5));
-
         button = new JButton("Start");
         button.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent ae) {
-                //Evaluate.
+                Evaluate.MAX_NO_TRIBUNAL = ((JSlider) SettingsPanel.this.getComponent(3)).getValue();
+                Evaluate.CONST_ACCESS_TRIBUNAL = ((JSlider) SettingsPanel.this.getComponent(5)).getValue();
+                Evaluate.CONST_CONSTRUCT_TRIBUNAL = ((JSlider) SettingsPanel.this.getComponent(7)).getValue();
+                Evaluate.MAX_DIST = Integer.valueOf(((JTextField) SettingsPanel.this.getComponent(9)).getText());
+
+                GeneticAlgorithm.MAX_ITER = Integer.valueOf(((JTextField) SettingsPanel.this.getComponent(14)).getText());
+                GeneticAlgorithm.CROSSOVER_RATE = (double) ((JSlider) SettingsPanel.this.getComponent(16)).getValue() / 100;
+                GeneticAlgorithm.MUTATION_RATE = (double) ((JSlider) SettingsPanel.this.getComponent(18)).getValue() / 100;
+
+                SimAnnealing.coolingRate = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(21)).getText());
+                SimAnnealing.STOP_CONDITION = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(23)).getText());
+
+                System.out.println(GeneticAlgorithm.MAX_ITER + " " + GeneticAlgorithm.CROSSOVER_RATE + " " + GeneticAlgorithm.MUTATION_RATE + " " +
+                        SimAnnealing.coolingRate + " " + SimAnnealing.STOP_CONDITION);
+
+                ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startGA(new GeneticAlgorithm());
+
             }
         });
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -37,7 +54,13 @@ public class SettingsPanel extends JPanel {
         c.ipady = 25;
         this.add(button, c);
 
-        button = new JButton("Stop");
+        button = new JButton("Exit");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                System.exit(1);
+            }
+        });
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
         c.gridy = 0;

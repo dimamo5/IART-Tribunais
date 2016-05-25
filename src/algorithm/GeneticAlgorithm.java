@@ -6,14 +6,15 @@ import java.util.Random;
  * Created by diogo on 20/05/2016.
  */
 public class GeneticAlgorithm {
-    public final static int MAX_ITER = 2000;             // max number of iterations
-    public final static double MUTATION_RATE = 0.1;     // probability of mutation
-    public final static double CROSSOVER_RATE = 0.8;     // probability of crossover
+    public static int MAX_ITER = 2000;             // max number of iterations
+    public static double MUTATION_RATE = 0.1;     // probability of mutation
+    public static double CROSSOVER_RATE = 0.8;     // probability of crossover
 
     private Population pop = new Population();
     private Individual[] newPop = new Individual[Population.POP_SIZE];
     private Individual[] indiv = new Individual[2];
     private Random rand = new Random();
+    private Individual bestIndiv;
 
     public static void main(String[] args) {
         new GeneticAlgorithm().start();
@@ -64,6 +65,10 @@ public class GeneticAlgorithm {
         }
 
         // best indiv
-        Individual bestIndiv = pop.findBestIndividual();
+        this.bestIndiv = pop.findBestIndividual();
+    }
+
+    public Individual getBestIndiv() {
+        return bestIndiv;
     }
 }

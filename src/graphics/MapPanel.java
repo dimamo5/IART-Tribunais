@@ -81,7 +81,8 @@ public class MapPanel extends JPanel{
     }
 
     public void startGA(GeneticAlgorithm ga) {
-
+        ga.start();
+        ga.getBestIndiv();
     }
 
 }
