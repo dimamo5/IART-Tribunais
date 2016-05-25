@@ -35,7 +35,6 @@ public class MapPanel extends JPanel{
             this.setMinimumSize(new Dimension(map.getWidth(), map.getHeight()));
             this.setSize(new Dimension(map.getWidth(), map.getHeight()));
             this.setPreferredSize(new Dimension(map.getWidth(), map.getHeight()));
-            System.out.println("hor: " + PIXEL_PER_COORD_HOR +" ver: "+PIXEL_PER_COORD_VER);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,7 +49,6 @@ public class MapPanel extends JPanel{
             this.setMinimumSize(new Dimension(map.getWidth(), map.getHeight()));
             this.setSize(new Dimension(map.getWidth(), map.getHeight()));
             this.setPreferredSize(new Dimension(map.getWidth(), map.getHeight()));
-            //System.out.println("hor: " + PIXEL_PER_COORD_HOR +" ver: "+PIXEL_PER_COORD_VER);
         } catch (IOException e) {
             e.printStackTrace();
         }
