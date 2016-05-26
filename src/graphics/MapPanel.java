@@ -94,10 +94,10 @@ public class MapPanel extends JPanel {
     public void startSA(SimAnnealing sa) {
         while (sa.temperature > sa.stop_cond) {
             sa.runIte();
-            ind = sa.getBestInd();
+            ind = sa.getBestIndiv();
             this.paintImmediately(0, 0, this.getWidth(), this.getHeight());
         }
-        System.out.println(sa.getBestInd());
+        System.out.println(sa.getBestIndiv());
     }
 
     public void startGASA() {
@@ -106,6 +106,6 @@ public class MapPanel extends JPanel {
         System.out.println("GA: " + ga.getBestIndiv());
         SimAnnealing sa = new SimAnnealing(ga.getBestIndiv());
         startSA(sa);
-        System.out.println("SA: " + sa.getBestInd());
+        System.out.println("SA: " + sa.getBestIndiv());
     }
 }

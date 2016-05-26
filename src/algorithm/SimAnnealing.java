@@ -57,7 +57,7 @@ public class SimAnnealing {
         this.STOP_CONDITION = STOP_CONDITION;
     }
 
-    public Individual getBestInd() {
+    public Individual getBestIndiv() {
         return individual;
     }
 

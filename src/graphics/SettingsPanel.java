@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.NumberFormat;
 
 /**
  * Created by diogo on 25/05/2016.
@@ -55,14 +56,24 @@ public class SettingsPanel extends JPanel {
 
                 JPanel algorithmPanel = ((JPanel) SettingsPanel.this.getComponent(11));
 
+                JLabel label = ((JLabel) SettingsPanel.this.getComponent(28));
+
+                long start = System.currentTimeMillis();
                 if (((JRadioButton) algorithmPanel.getComponent(0)).isSelected()) {
-                    ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startGA(new GeneticAlgorithm());
+                    GeneticAlgorithm ga = new GeneticAlgorithm();
+                    ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startGA(ga);
+                    label.setText("<html>Valor Fitness: " + String.format("%10s", NumberFormat.getNumberInstance().format(ga.getBestIndiv().getFitnessValue())) + "\n");
                 } else if (((JRadioButton) algorithmPanel.getComponent(1)).isSelected()) {
-                    ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startSA(new SimAnnealing());
+                    SimAnnealing sa = new SimAnnealing();
+                    ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startSA(sa);
+                    label.setText("<html>Valor Fitness: " + String.format("%10s", NumberFormat.getNumberInstance().format(sa.getBestIndiv().getFitnessValue())) + "\n");
+
                 } else if (((JRadioButton) algorithmPanel.getComponent(2)).isSelected()) {
                     ((MapPanel) SettingsPanel.this.getParent().getComponent(1)).startGASA();
                 }
+                long elapsedTime = System.currentTimeMillis() - start;
 
+                label.setText(label.getText() + "<br>Tempo gasto: " + elapsedTime / 1000F + "sec </html>");
             }
         });
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -154,7 +165,7 @@ public class SettingsPanel extends JPanel {
         c.gridx = 0;
         c.weightx = 2;
         c.gridy = 15;
-        c.ipady = 150;
+        c.ipady = 50;
         this.add(label, c);
 
     }
