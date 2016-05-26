@@ -9,7 +9,7 @@ public class Evaluate implements Runnable {
     public static int CONST_ACCESS_TRIBUNAL = 2;
     public static int CONST_CONSTRUCT_TRIBUNAL = 1;
     public static int MAX_DIST = 50000; //50000m em linha recta de distancia maxima
-    public static int MAX_NO_TRIBUNAL = 150;
+    public static int MAX_NO_TRIBUNAL = 140;
     private Database db = Database.getInstance();
     private Individual individual;
 

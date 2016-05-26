@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
  * Created by diogo on 25/05/2016.
  */
 public class SettingsPanel extends JPanel {
-    public final static int MIN_COUNTY_SIZE = 20;
+    public final static int MIN_COUNTY_SIZE = 140;
     public final int COUNTY_SIZE = Database.getInstance().getSize();
     GridBagConstraints c = new GridBagConstraints();
 
@@ -40,8 +40,15 @@ public class SettingsPanel extends JPanel {
                 GeneticAlgorithm.MAX_ITER = Integer.valueOf(((JTextField) SettingsPanel.this.getComponent(14)).getText());
                 GeneticAlgorithm.CROSSOVER_RATE = (double) ((JSlider) SettingsPanel.this.getComponent(16)).getValue() / 100;
                 GeneticAlgorithm.MUTATION_RATE = (double) ((JSlider) SettingsPanel.this.getComponent(18)).getValue() / 100;
-                Population.ELITISM_K = ((JSlider) SettingsPanel.this.getComponent(20)).getValue();
-                Population.POP_SIZE = ((JSlider) SettingsPanel.this.getComponent(22)).getValue();
+                int k = ((JSlider) SettingsPanel.this.getComponent(20)).getValue();
+                int popSize = ((JSlider) SettingsPanel.this.getComponent(22)).getValue();
+
+                if (k + popSize % 2 == 0) {
+                    popSize++;
+                    ((JSlider) SettingsPanel.this.getComponent(22)).setValue(popSize);
+                }
+                Population.ELITISM_K = k;
+                Population.POP_SIZE = popSize;
 
                 SimAnnealing.coolingRate = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(25)).getText());
                 SimAnnealing.STOP_CONDITION = Double.valueOf(((JTextField) SettingsPanel.this.getComponent(27)).getText());
@@ -85,7 +92,7 @@ public class SettingsPanel extends JPanel {
         JSlider slider = new JSlider(MIN_COUNTY_SIZE, COUNTY_SIZE, Evaluate.MAX_NO_TRIBUNAL);
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
-        slider.setMajorTickSpacing(50);
+        slider.setMajorTickSpacing(30);
 
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
