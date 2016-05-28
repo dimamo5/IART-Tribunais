@@ -43,8 +43,7 @@ public class SettingsPanel extends JPanel {
                 GeneticAlgorithm.MUTATION_RATE = (double) ((JSlider) SettingsPanel.this.getComponent(18)).getValue() / 100;
                 int k = ((JSlider) SettingsPanel.this.getComponent(20)).getValue();
                 int popSize = ((JSlider) SettingsPanel.this.getComponent(22)).getValue();
-
-                if (k + popSize % 2 == 0) {
+                if ((k + popSize) % 2 != 0) {
                     popSize++;
                     ((JSlider) SettingsPanel.this.getComponent(22)).setValue(popSize);
                 }
