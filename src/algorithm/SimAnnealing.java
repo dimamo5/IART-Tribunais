@@ -2,6 +2,7 @@ package algorithm;
 
 import java.io.IOException;
 import java.text.NumberFormat;
+import java.util.Arrays;
 import java.util.Locale;
 
 
@@ -30,8 +31,8 @@ public class SimAnnealing {
     // Calculate the acceptance probability
     public static boolean acceptanceProbability(double E, double newE, double temperature) {
 
-        if (newE == 0.0)
-            return false;
+        /*if (newE == 0.0)
+            return false;*/
 
         double delta_E = newE - E;
 
@@ -44,8 +45,25 @@ public class SimAnnealing {
 
         // (int i = 0; i < 10; i++) {
         SimAnnealing sm1 = new SimAnnealing(new Individual("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111011111111101111111010111111011111011110101100111110111000100000101000001001100001000000000000000000100000000000000000100000000000000000000000000000000000000000000000000000000000000000"));
+        //sm1.run();
         SimAnnealing sm = new SimAnnealing();
-        sm1.run();
+        sm.setCoolingRate(0.1);
+        long start = System.currentTimeMillis();
+        sm.run();
+        System.out.println(System.currentTimeMillis()-start);
+
+        start =System.currentTimeMillis();
+        sm = new SimAnnealing();
+        sm.setCoolingRate(0.01);
+        sm.run();
+        System.out.println(System.currentTimeMillis()-start);
+
+        start =System.currentTimeMillis();
+        sm = new SimAnnealing();
+        sm.setCoolingRate(0.001);
+        sm.run();
+        System.out.println(System.currentTimeMillis()-start);
+
         //}
     }
 
@@ -73,19 +91,22 @@ public class SimAnnealing {
                 newF = newInd.evaluate(); //newInd Rating
                 f = this.individual.evaluate(); //actualInd Rating
 
-                /*
-                if (!this.individual.getGenes().equals(newInd.getGenes())) {
+
+                if (!Arrays.equals(this.individual.getGenes(), newInd.getGenes())) {
                     if (this.individual.getFitnessValue() != newInd.getFitnessValue())
                         fitness_diff++;
+                    else {/*fitness_eq++*/; this.individual = newInd;}
                 } else
                     genes_iguais++;
-*/
-                total++;//*/
+
+                total++;
+
                 if (acceptanceProbability(f, newF, temperature)) {
-                    if (!this.individual.getGenes().equals(newInd.getGenes())) {
+                    if (!Arrays.equals(this.individual.getGenes(), newInd.getGenes())) {
                         this.individual = newInd;
                         changes++;
-                    }
+                    }else
+                        no_changes++;
 
                     if ((newF - f) <= 0)
                         bad++;
@@ -116,7 +137,7 @@ public class SimAnnealing {
     }
 
     public void run() throws IOException {
-        int total = 0, bad = 0, best = 0, good = 0, fitness_diff = 0, no_changes = 0, genes_iguais = 0, changes = 0;
+        int total = 0, bad = 0, best = 0, good = 0, fitness_diff = 0, no_changes = 0, genes_iguais = 0, changes = 0, fitness_eq = 0;
 
         double f, newF;
         while (temperature > stop_cond) {
@@ -127,19 +148,22 @@ public class SimAnnealing {
                 newF = newInd.evaluate(); //newInd Rating
                 f = this.individual.evaluate(); //actualInd Rating
 
-                /*
-                if (!this.individual.getGenes().equals(newInd.getGenes())) {
+
+                if (!Arrays.equals(this.individual.getGenes(), newInd.getGenes())) {
                     if (this.individual.getFitnessValue() != newInd.getFitnessValue())
                         fitness_diff++;
+                    else {fitness_eq++; this.individual = newInd;}
                 } else
                     genes_iguais++;
-*/
-                total++;//*/
+
+                total++;
+
                 if (acceptanceProbability(f, newF, temperature)) {
-                    if (!this.individual.getGenes().equals(newInd.getGenes())) {
+                    if (!Arrays.equals(this.individual.getGenes(), newInd.getGenes())) {
                         this.individual = newInd;
                         changes++;
-                    }
+                    }else
+                        no_changes++;
 
                     if ((newF - f) <= 0)
                         bad++;
@@ -156,8 +180,9 @@ public class SimAnnealing {
         }
 
         System.out.println("\nGenes Iguais: " + genes_iguais
-                + "\nFitness Diferente: " + fitness_diff
+                + "\nFitness Diferente/Igual: " + fitness_diff + " " + fitness_eq
                 + "\nTroca p/ Individuo != actual: " + changes
+                + "\n Sem trocas :" + no_changes
                 + "\nUpgrade: " + good
                 + "\nDowngrade(descida na colina):" + bad
                 //  +"\nTotal trocas: " + total_changes
@@ -168,5 +193,4 @@ public class SimAnnealing {
         System.out.printf(s);
         System.out.printf(s2 + "\n");
     }
-    // TODO: 25/05/2016 @sergio faz a optimização
 }
