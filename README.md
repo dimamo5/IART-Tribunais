@@ -3,10 +3,10 @@
 ##Optimization of Courts Location at Portugal (Continental)
 
 
-*Use of Genetic Algorith and Simulated Annealing
-*Statistics
-*GUI
-*External APIs: GeoCoding (Google), jsoup, SimpleJson.
+* Use of Genetic Algorith and Simulated Annealing
+* Statistics
+* GUI
+* External APIs: GeoCoding (Google), jsoup, SimpleJson.
 
 ###Description
 
